@@ -8,11 +8,11 @@
 }
 
 .nifty-cards {
-  width: 32%;
+  width: 30%;
   border: 1px solid #ddd !important;
   border-radius: 0.5rem;
   overflow: hidden;
-  padding: 12px !important;
+  padding: 16px !important;
   margin-bottom: 0 !important;
 
   /* height: fit-content; */

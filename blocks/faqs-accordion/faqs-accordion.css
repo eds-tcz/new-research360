@@ -1,3 +1,7 @@
+.faqs-accordion-wrapper
+{
+    max-width: 90% !important;
+}
 .frequently-asked-questions-container {
     display: flex;
     background: #F4F4F4;
