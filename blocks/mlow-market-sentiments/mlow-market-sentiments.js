@@ -49,7 +49,7 @@ export default function decorate(block) {
             tableA.classList.add('ms-status-tab');
             [...tableA.rows].forEach((tr, t) => {
               tr.classList.add('ms-status-row-'.concat(t + 1));
-              [...tr.cells].forEach((td, i) => {
+              [...tr.cells].forEach((td) => {
                 td.classList.add('ms-status-cell');
               });
             });
@@ -67,7 +67,7 @@ export default function decorate(block) {
             table.classList.add('cf-status-tab');
             [...table.rows].forEach((tr, t) => {
               tr.classList.add('cf-status-row-'.concat(t + 1));
-              [...tr.cells].forEach((td, i) => {
+              [...tr.cells].forEach((td) => {
                 td.classList.add('cf-status-cell');
               });
             });
@@ -83,7 +83,7 @@ export default function decorate(block) {
             table.classList.add('cf-status-tab');
             [...table.rows].forEach((tr, t) => {
               tr.classList.add('cf-status-row-'.concat(t + 1));
-              [...tr.cells].forEach((td, i) => {
+              [...tr.cells].forEach((td) => {
                 td.classList.add('cf-status-cell');
               });
             });
