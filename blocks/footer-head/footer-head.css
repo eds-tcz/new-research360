@@ -1,0 +1,37 @@
+.footer-head-container {
+  margin: 40px 0 0 !important;
+  border-top: 4px solid #fcaf17;
+}
+
+.footer-head-wrapper {
+  max-width: 1366px !important;
+  padding: 0 !important;
+}
+
+.footer-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 16px 12px;
+}
+
+.footer-logo {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-social h2 {
+  font-size: 20px;
+  margin: auto;
+}
+
+.footer-social p {
+  margin: auto !important;
+}
