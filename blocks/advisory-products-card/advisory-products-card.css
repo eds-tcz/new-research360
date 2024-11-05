@@ -155,9 +155,38 @@
 .adisory-div4 table tbody tr:first-child :first-child{
         background: #EEE;
     border-radius: 8px;
-    padding: 5px 10px;
-    display: block;
+    padding: 5px 0px;
     text-align: center;
     margin: 12px 0;
+    width: 100%;
 }
 
+.adisory-div4 table tbody tr:nth-child(2) td:first-child
+{
+    font-weight: 600;
+    padding: 2px 20px;
+    text-align: center;
+    border: solid 1px #DDD;
+    border-radius: 8px;
+    text-align: center;
+    display: block;
+    color: #000;
+    width: 48%;
+    height: 33px;
+}
+.adisory-div4 table tbody tr:nth-child(2) td:nth-child(2)
+{
+    font-weight: 600;
+    padding: 2px 20px;
+    text-align: center;
+    border: solid 1px #DDD;
+    border-radius: 8px;
+    text-align: center;
+    display: block;
+    color: #000;
+    width: 48%;
+    cursor: pointer;
+    background: #EEE;
+    color: #666;
+    width: 48%;
+}
