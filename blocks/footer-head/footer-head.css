@@ -6,6 +6,7 @@
 .footer-head-wrapper {
   max-width: 1366px !important;
   padding: 0 !important;
+  margin: auto;
 }
 
 .footer-banner {
