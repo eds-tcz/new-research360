@@ -1,0 +1,112 @@
+.iap-wrapper
+{
+    max-width: 90% !important;
+}
+.iap
+{
+    display: flex;
+}
+.iap-card-image > p
+{
+    display: flex;
+}
+.iap-card-image > p > picture
+{
+    width: 42px;
+    height: 42px;
+    padding: 2px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.iap-card-image > p > code
+{
+        margin-top: 10px;
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.iap-image-card
+{
+    border: 1px solid #DDD;
+    width: 35%;
+    border-radius: 8px;
+    margin-right: 1%;
+    padding: 12px;
+}
+.iap-card-image
+{
+    position: relative; 
+    border-bottom: 1px solid #ddd; 
+    padding-bottom: 4px;
+}
+ .iap-card-title table td:nth-child(1),
+  .iap-card-title table td:nth-child(2) {
+    position: relative; 
+  }
+
+ 
+  .iap-card-title table td:nth-child(1)::after,
+  .iap-card-title table td:nth-child(2)::after {
+    content: ''; 
+    position: absolute;
+    top: 10px;  
+    right: 0;
+    width: 1px; 
+    height: 50px; 
+    background-color: #dee2e6!important 
+  }
+  pre
+  {
+    background-color: white;
+     padding: 0px 10px 0px 28px !important;
+        
+  }
+  .iap-card-title
+  {
+        position: relative;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0px;
+  }
+  .iap-card-button
+  {
+    background: #06c39b;
+    min-width: 150px;
+    height: 40px;
+    border: 0;
+    border-radius: 5px;
+    text-align: center !important;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 16.41px;
+        cursor: pointer;
+  }
+  .iap-card-button > p
+  {
+    padding-top: 10px !important;
+  }
+  .iap-card-title > table > tbody > tr > td> pre > code
+  {
+        color: #666;
+    opacity: unset !important;
+    margin-bottom: 0;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+    text-align: left;
+  }
+.iap-card-data > table
+{
+    width: 110%;
+    table-layout: fixed;
+}
+.iap-card-data
+{
+    padding-top: 10px;
+}
