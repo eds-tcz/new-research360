@@ -1,0 +1,252 @@
+.mlow-market-sentiments-wrapper {
+    max-width: 1366px !important;
+    margin: auto !important;
+    padding: 0 !important;
+}
+
+.mlow-market-sentiments {
+    display: flex;
+    gap: 20px;
+}
+
+.mlow-ms-section {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.advance-decline p a {
+    margin: 10px 0 !important;
+    padding: 12px 6px !important;
+    font-size: 16px !important;
+    background: none !important;
+    border: 1px solid #f0a500 !important;
+    color: #000 !important;
+    border-radius: 4px !important;
+    cursor: pointer;
+    width: 100%;
+}
+
+.advance-decline h2 {
+    margin: 16px 16px 0 !important;
+    font-size: 20px;
+    color: #000;
+}
+
+.advance-decline p {
+    margin: 0 16px;
+    font-size: 14px;
+    color: #999;
+    border-bottom: 1px solid #d8d6cf !important;
+}
+
+.advance-decline p:last-child {
+    border-bottom: 0 !important;
+}
+
+.ad-tab {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ad-cell {
+    padding: 8px;
+    text-align: left;
+    font-size: 14px;
+    border-bottom: 1px solid #d8d6d1;
+    height: 50px;
+}
+
+.ad-row:hover .ad-cell {
+    border-color: #feae17;
+    border-bottom: 1px solid #feae17;
+    border-top: 1px solid;
+}
+
+.ad-tab tr:first-child {
+    background-color: #f7f7f7;
+    color: #0006 !important;
+}
+
+.ad-tab tr:first-child td {
+    color: #0006 !important;
+}
+
+.ad-row td:nth-child(1) {
+    width: 30%;
+    color: #000;
+}
+
+.ad-row td:nth-child(2) {
+    width: 20%;
+    text-align: center;
+    color: #2db777;
+}
+
+.ad-row td:nth-child(3) {
+    width: 60%;
+    text-align: center;
+}
+
+/* <----- Card 2 -----> */
+
+.ms-heading {
+    margin: 16px 16px 0 !important;
+}
+
+.ms-heading h2 {
+    font-size: 20px;
+    color: #000;
+    margin: 0;
+}
+
+.ms-heading p {
+    font-size: 14px;
+    color: #999;
+    border-bottom: 1px solid #d8d6cf !important;
+    margin: 0;
+}
+
+.ms-head-filter ul {
+    list-style-type: none;
+    display: flex;
+    gap: 12px;
+    font-size: 14px;
+    color: #666;
+    margin: 24px 16px 0;
+    padding: 0;
+    border-bottom: 1px solid #d8d6cf !important;
+}
+
+.ms-head-filter ul li {
+    padding: 1px 11px 15px 11px;
+    color: #0006;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.ms-head-filter ul li:hover {
+    color: #000;
+}
+
+.ms-head-filter ul li:first-child {
+    border-bottom: 2px solid #fcaf17;
+    color: #000;
+}
+
+.ms-content {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #d8d6cf !important;
+    margin: 0px 16px;
+}
+
+.ms-content ol {
+    list-style-type: none;
+    font-size: 14px;
+    color: #666;
+    padding: 24px 0;
+    width: 30%;
+}
+
+.ms-content ol li {
+    padding: 8px 0px;
+    font-size: 14px;
+    border-bottom: 1px solid #d8d6cf !important;
+    text-align: center;
+}
+
+.ms-status {
+    margin: 16px;
+}
+
+.ms-status-tab {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    text-align: center;
+}
+
+.ms-status-row-1 {
+    font-weight: 500 !important;
+    color: #b6b6b6;
+}
+
+.ms-status-cell {
+    padding: 0 8px;
+    border-right: 1px solid #d8d6cf !important;
+}
+.ms-status-row-2 td:last-child {
+    border-right: 0 !important;
+}
+
+.ms-status-row-1 td:last-child {
+    border-right: 0 !important;
+}
+
+.ms-status-row-2 td {
+    font-size: 18px !important;
+    font-weight: 500 !important;
+}
+
+.cf-status-tab {
+    width: 93%;
+    border-collapse: collapse;
+    font-size: 14px;
+    text-align: center;
+    margin: 16px 16px 0;
+}
+
+.cf-status-tab tr td:first-child {
+    width: 40%;
+    text-align: left;
+}
+
+.cf-status-tab tr td:last-child {
+    width: 30%;
+}
+
+.cf-status-row-1 td:first-child {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.cf-status-row-1 td:last-child {
+    font-size: 24px;
+    font-weight: 500;
+    color: #ff4f6a;
+    text-align: right;
+}
+
+.cf-status-row-2 td {
+    font-size: 14px;
+    color: #0006;
+}
+
+.cf-heading-2 .cf-status-row-1 td:last-child {
+    font-size: 14px;
+    color: #2db777;
+}
+
+.cf-graph {
+    margin-top: 24px;
+    height: 115px;
+}
+
+.cf-button p a {
+    margin: 10px 0 !important;
+    padding: 12px 6px !important;
+    font-size: 16px !important;
+    background: none !important;
+    border: 1px solid #f0a500 !important;
+    color: #000 !important;
+    border-radius: 4px !important;
+    cursor: pointer;
+    width: 100%;
+}
+
+.cf-button p {
+    width: 100%;
+    margin: 0 16px;
+}
