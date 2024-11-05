@@ -1,16 +1,16 @@
-.faqs-accordion-wrapper
-{
+.faqs-accordion-wrapper {
     max-width: 90% !important;
+    flex: 0.7;
 }
+
 .frequently-asked-questions-container {
     display: flex;
-    background: #F4F4F4;
+    background: #f4f4f4;
     padding: 25px 80px;
 }
 
-
 .frequently-asked-questions-button {
-    background-color: #FFF;
+    background-color: #fff;
     color: #000;
     border: 1.5px solid #fff;
     font-size: 17px;
@@ -23,13 +23,8 @@
     cursor: pointer;
 }
 
-
 .frequently-asked-questions-wrapper {
     flex: 0.3;
-}
-
-.faqs-accordion-wrapper {
-    flex: 0.7;
 }
 
 .faqs-accordion-question {
@@ -50,7 +45,6 @@
     background-image: url("../../images/mlow-market-nav-1/minus-sign.png");
 }
 
-
 .faqs-accordion-question p {
     margin: 0;
     font-family: Roboto, sans-serif;
@@ -64,14 +58,13 @@
     font-weight: 400;
     line-height: 28px;
     text-align: left;
-     display: none;
+    display: none;
 }
 
 .faqs-accordion-answer p {
     margin: 0;
     color: #666;
     font-family: Roboto, sans-serif;
-
 }
 
 .faqs-accordion-item {
@@ -82,7 +75,6 @@
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
-
 
 .faqs-accordion-answer.show {
     display: block;
