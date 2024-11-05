@@ -38,7 +38,11 @@
     --heading-font-size-xs: 22px;
 
     /* nav height */
+<<<<<<< HEAD
+    --nav-height: 175px;
+=======
     --nav-height: 172px;
+>>>>>>> dd10243e923789e02d3461d6bc88c26f8a7d5ce5
 }
 
 /* fallback fonts */
@@ -251,7 +255,11 @@ main > .section {
 }
 
 main > .section > div {
+<<<<<<< HEAD
+    max-width: 1200px;
+=======
     max-width: 1366px;
+>>>>>>> dd10243e923789e02d3461d6bc88c26f8a7d5ce5
     margin: auto;
     padding: 0 24px;
 }
@@ -262,7 +270,11 @@ main > .section:first-of-type {
 
 @media (width >= 900px) {
     main > .section > div {
+<<<<<<< HEAD
+        padding: 0 32px;
+=======
         /* padding: 0 32px; */
+>>>>>>> dd10243e923789e02d3461d6bc88c26f8a7d5ce5
     }
 }
 

@@ -1,6 +1,12 @@
 /* stylelint-disable no-descending-specificity */
+<<<<<<< HEAD
+
+.mlow-market-status-wrapper {
+  max-width: 90% !important;
+=======
 .mlow-market-status-wrapper {
     max-width: 90% !important;
+>>>>>>> dd10243e923789e02d3461d6bc88c26f8a7d5ce5
 }
 
 .mlow-market-status {

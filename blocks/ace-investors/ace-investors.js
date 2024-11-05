@@ -19,13 +19,17 @@ export default function decorate(block) {
     });
   });
   // Select the parent element that contains the list items
-  if(!isListenerAdded){
-    document.querySelector('.mlow-market-head .market-card-filter').addEventListener('click', function(e) {
-      // Check if the clicked element is an <li>
-      if (e.target.closest('li')) {
+  if (!isListenerAdded) {
+    document
+      .querySelector('.mlow-market-head .market-card-filter')
+      .addEventListener('click', function (e) {
+        // Check if the clicked element is an <li>
+        if (e.target.closest('li')) {
           e.preventDefault(); // Prevent the default action
           // Get the anchor tag within the clicked <li>
-          const anchorText = e.target.closest('li').querySelector('a').textContent;
+          const anchorText = e.target
+            .closest('li')
+            .querySelector('a').textContent;
           console.log(anchorText); // Log the anchor text
           getMarketGainers(anchorText);
           const listItems = this.querySelectorAll('li');
@@ -37,8 +41,8 @@ export default function decorate(block) {
           e.target.closest('li').style.backgroundColor = '#fcaf17';
           e.target.closest('li').style.fontWeight = 'bold';
           isListenerAdded = true;
-      }
-    });
+        }
+      });
     isListenerAdded = true;
   }
 }
@@ -61,25 +65,25 @@ function getMarketGainers(period) {
     sortdirection: 'DESC',
     search: '',
     pagenumber: '1',
-    pagesize: '4'
+    pagesize: '4',
   });
 
   fetch(`${url}?${params.toString()}`)
-    .then(response => {
+    .then((response) => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
       return response.json();
     })
-    .then(data => {
+    .then((data) => {
       console.log('Market Gainers API Call Successful:', data);
       let gainersData = data?.data;
       populateMarketGainers(gainersData);
     })
-    .catch(error => {
+    .catch((error) => {
       console.error('Market Gainers API Call Failed:', error);
     });
-};
+}
 function populateMarketGainers(gainersData) {
   const tableBody = document.querySelector('.market-card-table tbody');
 
@@ -97,20 +101,24 @@ function populateMarketGainers(gainersData) {
   gainersData.forEach((data) => {
     const perChangeSign = data.per_change > 0 ? '+' : '-';
     const formattedPrice = parseFloat(data.ltp).toFixed(2);
-    const formattedPerChange = `${perChangeSign}${Math.abs(data.per_change).toFixed(2)}%`;
+    const formattedPerChange = `${perChangeSign}${Math.abs(
+      data.per_change
+    ).toFixed(2)}%`;
 
     const row = `
       <tr>
         <td>${data.compname}</td>
         <td>Graph</td>
         <td>${formattedPrice}</td>
-        <td style='color: ${data.per_change > 0 ? 'green' : 'red'};'>${formattedPerChange}</td>
+        <td style='color: ${
+          data.per_change > 0 ? 'green' : 'red'
+        };'>${formattedPerChange}</td>
       </tr>
     `;
 
     // Append the row to the table body
     tableBody.insertAdjacentHTML('beforeend', row);
   });
-};
+}
 
 getMarketGainers('1H');
