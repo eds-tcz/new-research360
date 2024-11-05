@@ -1,12 +1,6 @@
 /* stylelint-disable no-descending-specificity */
-<<<<<<< HEAD
-
-.mlow-market-status-wrapper {
-  max-width: 90% !important;
-=======
-.mlow-market-status-wrapper {
+.ace-investors-wrapper {
     max-width: 90% !important;
->>>>>>> dd10243e923789e02d3461d6bc88c26f8a7d5ce5
 }
 
 .mlow-market-status {
@@ -15,13 +9,30 @@
     max-width: 100%;
 }
 
-.mlow-market-head {
+.ace-investors-head {
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     width: 33.33%;
     display: flex;
     flex-direction: column;
+}
+.ace-investors 
+{
+    display: flex;
+    gap: 1%;
+}
+.ace-investors .ace-investors-head:first-child 
+{
+    width: 25%;
+}
+.ace-investors .ace-investors-head:nth-child(2)
+{
+    width: 25%;
+}
+.ace-investors .ace-investors-head:nth-child(3)
+{
+    width: 47%;
 }
 
 /* <----- Title -----> */
@@ -158,4 +169,14 @@
 .market-card-table >p
 {
     font-size: 15px;
+    white-space: nowrap;
+}
+.market-card-table td p
+{
+    white-space: nowrap;
+}
+.ace-investors-head .market-card-table-wrap:first-child table:first-child tbody tr td:nth-child(2)
+{
+        padding-top: 46px;
+    white-space: nowrap;
 }
