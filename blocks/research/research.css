@@ -44,6 +44,25 @@
     border-bottom: 1px solid #ddd; 
     padding-bottom: 4px;
 }
+.research-card-image table tbody tr td:nth-child(2) table tbody tr
+{
+  display: grid;
+  line-height: 1;
+  margin-left: 5px;
+}
+.research-card-image table tbody tr td:nth-child(3)
+{
+  /* padding-left: 50%; */
+  font-weight: 600;
+    padding: 5px 20px;
+    text-align: center;
+    border: solid 1px #DDD;
+    border-radius: 8px;
+    text-align: center;
+    display: block;
+    color: #000;
+    background-color: #ffc107;
+}
  .research-card-title table td:nth-child(1),
   .research-card-title table td:nth-child(2) {
     position: relative; 
