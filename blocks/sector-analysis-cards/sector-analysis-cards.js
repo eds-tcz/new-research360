@@ -85,40 +85,36 @@ async function stockanalysisdata() {
                                     <div class="divider-bottom-1 pb-1 mb-1">
                                         <div class="sector-header d-flex align-items-center align-items-center justify-content-start mb-0">
                                             <p class="font-medium16 font-wt-medium me-auto">
-                                                <a href="sector-analysis/nse/${
-  stockanalysis.sect_name
-}/overview" 
+                                                <a href="sector-analysis/nse/${stockanalysis.sect_name
+        }/overview" 
                                                    class="fontwt-medium sorting_1 text-black">
                                                     ${stockanalysis.sect_name}
                                                 </a>
                                             </p>
                                             <p class="font-caribbeangreen">
                                                 <span class="d-inline-flex align-items-center">
-                                                    <em class="triangle-${
-  parseFloat(
-    stockanalysis.per_change,
-  ) >= 0
-    ? 'up'
-    : 'down'
-} me-2"></em>
+                                                    <em class="triangle-${parseFloat(
+          stockanalysis.per_change,
+        ) >= 0
+          ? 'up'
+          : 'down'
+        } me-2"></em>
                                                 </span>
                                                 <span>
-                                                    <div class="${
-  parseFloat(
-    stockanalysis.per_change,
-  ) >= 0
-    ? 'font-caribbeangreen'
-    : 'font-infrared'
-}">
-                                                        ${
-  parseFloat(
-    stockanalysis.per_change,
-  ) >= 0
-    ? '+'
-    : ''
-}${parseFloat(
-  stockanalysis.per_change,
-).toFixed(2)}%
+                                                    <div class="${parseFloat(
+          stockanalysis.per_change,
+        ) >= 0
+          ? 'font-caribbeangreen'
+          : 'font-infrared'
+        }">
+                                                        ${parseFloat(
+          stockanalysis.per_change,
+        ) >= 0
+          ? '+'
+          : ''
+        }${parseFloat(
+          stockanalysis.per_change,
+        ).toFixed(2)}%
                                                     </div>
                                                 </span>
                                             </p>
@@ -129,46 +125,41 @@ async function stockanalysisdata() {
                                         <div class="progressbar">
                                             <div class="progress mt-1 sector-change">
                                                 <div class="" role="progressbar" 
-                                                     style="width: ${
-  ((total
-                                                         - parseInt(
-                                                           stockanalysis.decline,
-                                                           10,
-                                                         ))
-                                                         / total)
-                                                       * 100
-}%;background: #06c39b" 
-                                                     aria-valuenow="${
-  ((total
-                                                         - parseInt(
-                                                           stockanalysis.decline,
-                                                           10,
-                                                         ))
-                                                         / total)
-                                                       * 100
-}" 
+                                                     style="width: ${((total
+          - parseInt(
+            stockanalysis.decline,
+            10,
+          ))
+          / total)
+        * 100
+        }%;background: #06c39b" 
+                                                     aria-valuenow="${((total
+          - parseInt(
+            stockanalysis.decline,
+            10,
+          ))
+          / total)
+        * 100
+        }" 
                                                      aria-valuemin="0" 
-                                                     aria-valuemax="${
-  ((total
-                                                         - parseInt(
-                                                           stockanalysis.decline,
-                                                           10,
-                                                         ))
-                                                         / total)
-                                                       * 100
-}">
+                                                     aria-valuemax="${((total
+          - parseInt(
+            stockanalysis.decline,
+            10,
+          ))
+          / total)
+        * 100
+        }">
                                                 </div>
                                                 <div class="" role="progressbar" 
-                                                     style="width:${
-  (stockanalysis.decline
-                                                         / total)
-                                                       * 100
-}%;background: #ff4f6a;" 
-                                                     aria-valuenow="${
-  (stockanalysis.decline
-                                                         / total)
-                                                       * 100
-}" 
+                                                     style="width:${(stockanalysis.decline
+          / total)
+        * 100
+        }%;background: #ff4f6a;" 
+                                                     aria-valuenow="${(stockanalysis.decline
+          / total)
+        * 100
+        }" 
                                                      aria-valuemin="0" 
                                                      aria-valuemax="100">
                                                 </div>
@@ -176,37 +167,35 @@ async function stockanalysisdata() {
                                         </div>
 
                                         <div class="stats-container d-flex justify-content-between align-items-center lineheight-26 ">
-                                            ${
-  stockanalysis.advance > 0
-    ? `
+                                            ${stockanalysis.advance > 0
+          ? `
                                                 <div>
                                                     <small>Advance</small>
                                                     <b class="font-caribbeangreen"> ${Math.round(
-    total
-                                                        - parseInt(
-                                                          stockanalysis.decline,
-                                                          10,
-                                                        ),
-  )
-    .toString()
-    .slice(0, 2)}</b>
+            total
+            - parseInt(
+              stockanalysis.decline,
+              10,
+            ),
+          )
+            .toString()
+            .slice(0, 2)}</b>
                                                 </div>
                                             `
-    : ''
-}
-                                            ${
-  stockanalysis.decline > 0
-    ? `
+          : ''
+        }
+                                            ${stockanalysis.decline > 0
+          ? `
                                                 <div>
                                                     <small>Decline</small>
                                                     <b class="font-infrared"> ${parseInt(
-    stockanalysis.decline,
-    10,
-  )}</b>
+            stockanalysis.decline,
+            10,
+          )}</b>
                                                 </div>
                                             `
-    : ''
-}
+          : ''
+        }
                                         </div>
                                     </div>
 
@@ -221,73 +210,68 @@ async function stockanalysisdata() {
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    ${
-  snapData1
-    ? snapData1
-      .map(
-        (
-          sectoranalysisoverview,
-        ) => {
-          const ltp = sectoranalysisoverview.ltp
-                                                                  !== ''
-            ? parseFloat(
-              sectoranalysisoverview.ltp,
-            ).toFixed(
-              2,
-            )
-            : '-';
-          const perChangeVal = sectoranalysisoverview.per_change
-                                                                  !== ''
-            ? (sectoranalysisoverview.per_change
-                                                                      >= 0
-              ? '+'
-              : '')
-                                                                      + sectoranalysisoverview.per_change
-            : '-';
-          return `
+                                                    ${snapData1
+          ? snapData1
+            .map(
+              (
+                sectoranalysisoverview,
+              ) => {
+                const ltp = sectoranalysisoverview.ltp
+                  !== ''
+                  ? parseFloat(
+                    sectoranalysisoverview.ltp,
+                  ).toFixed(
+                    2,
+                  )
+                  : '-';
+                const perChangeVal = sectoranalysisoverview.per_change
+                  !== ''
+                  ? (sectoranalysisoverview.per_change
+                    >= 0
+                    ? '+'
+                    : '')
+                  + sectoranalysisoverview.per_change
+                  : '-';
+                return `
                                                             <tr>
                                                                 <td>
-                                                                    <a href="${baseUrl}stocks/${
-  sectoranalysisoverview.lname
-}" 
+                                                                    <a href="${baseUrl}stocks/${sectoranalysisoverview.lname
+                  }" 
                                                                        class="stock-symbol font-dark">
-                                                                        ${
-  sectoranalysisoverview.symbol
-}
+                                                                        ${sectoranalysisoverview.symbol
+                  }
                                                                     </a>
                                                                 </td>
                                                                 <td class="stock-symbol text-end">${ltp}</td>
                                                                 <td class="text-end">
                                                                     <p class="change-value font-caribbeangreen font-wt-medium text-nowrap">
                                                                         <span class="d-inline-flex align-items-center">
-                                                                            <em class="triangle-${
-  sectoranalysisoverview.per_change
-                                                                              >= 0
-    ? 'up'
-    : 'down'
-} me-2"></em>
+                                                                            <em class="triangle-${sectoranalysisoverview.per_change
+                    >= 0
+                    ? 'up'
+                    : 'down'
+                  } me-2"></em>
                                                                         </span>
-                                                                        <span class="${
-  sectoranalysisoverview.per_change
-                                                                          >= 0
-    ? 'font-caribbeangreen'
-    : 'font-infrared'
-}">
+                                                                        <span class="${sectoranalysisoverview.per_change
+                    >= 0
+                    ? 'font-caribbeangreen'
+                    : 'font-infrared'
+                  }">
                                                                             ${parseFloat(
-    perChangeVal,
-  ).toFixed(
-    2,
-  )}%
+                    perChangeVal,
+                  ).toFixed(
+                    2,
+                  )}%
                                                                         </span>
                                                                     </p>
                                                                 </td>
                                                             </tr>
                                                         `;
-        },
-      )
-      .join('')
-    : ''
-}
+              },
+            )
+            .join('')
+          : ''
+        }
                                                 </tbody>
                                             </table>
                                         </div>
