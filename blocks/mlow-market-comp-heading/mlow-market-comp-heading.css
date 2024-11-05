@@ -38,5 +38,4 @@
   margin-left: 5px; /* Add space between text and caret */
   font-size: 14px; /* Adjust the caret size to match the text */
   color: inherit; /* Make scure it inherits the color of the text */
-  content: ' \003e';
 }
