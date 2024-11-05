@@ -79,10 +79,10 @@
   .research-card-title table td:nth-child(2)::after {
     content: ''; 
     position: absolute;
-    top: 10px;  
+    top: 4px;  
     right: 0;
     width: 1px; 
-    height: 50px; 
+    height: 43px; 
     background-color: #dee2e6!important 
   }
   pre
@@ -93,19 +93,31 @@
   }
   .research-card-title
   {
+    height: 57px;
         position: relative;
     border-bottom: 1px solid #ddd;
     padding-bottom: 0px;
   }
+  .research-card-title table 
+  {
+    width: 100%;
+  }
+  .research-card-title table tr td
+  {
+    width: 30%;
+  }
+  .research-card-title table tbody tr td table tbody
+  {
+    line-height: 1;
+  }
   .research-card-button
   {
-    background: #06c39b;
     min-width: 150px;
     height: 40px;
     border: 0;
     border-radius: 5px;
     text-align: center !important;
-    color: #fff;
+    color: black;
     font-size: 14px;
     font-weight: 700;
     text-transform: capitalize;
@@ -115,6 +127,23 @@
   .research-card-button > p
   {
     padding-top: 10px !important;
+  }
+  .research-card-button table
+  {
+    width: 100%;
+  }
+  .research-card-button table tbody tr
+  {
+    display: flex;
+    justify-content: space-between;
+  }
+  .research-card-button table tbody tr td:nth-child(2)
+  {
+    margin-top: 19px;
+  }
+  .research-card-button table tbody tr td:nth-child(1)
+  {
+    margin-top: 17px;
   }
   .research-card-title > table > tbody > tr > td> pre > code
   {
@@ -135,4 +164,27 @@
 .research-card-data
 {
     padding-top: 10px;
+        border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+.research-card-data ul li code
+{
+  font-family: "Roboto", sans-serif !important;
+  font-size: 14px;
+}
+.research-card-title table tr td:nth-child(2),
+.research-card-title table tr td:nth-child(3) {
+    position: relative; 
+}
+
+
+.research-card-title table tr td:nth-child(2) code,
+.research-card-title table tr td:nth-child(3) code {
+    filter: blur(5px); 
+    opacity: 0.6; 
+}
+
+
+.research-card-title table tr td {
+    border-right: 1px solid #ccc;
 }
