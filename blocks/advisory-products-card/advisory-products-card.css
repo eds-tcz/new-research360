@@ -23,6 +23,7 @@
 
 .mlow-heading-h2 {
     display: flex;
+    border-bottom: 1px solid #DDD;
 }
 
 .heading-advisory-button p {
