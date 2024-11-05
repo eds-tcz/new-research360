@@ -3,8 +3,9 @@
 }
 
 .advisory-products-heading-filter-wrapper {
-    max-width: 90% !important;
-    margin: 16px auto !important;
+    max-width: 1366px !important;
+    padding: 0 !important;
+    margin: auto;
 }
 
 .filters-ul ul {
@@ -26,8 +27,7 @@
     transition: background-color 0.3s, border-color 0.3s;
     display: flex;
 }
-.filters-ul  li picture
-{
+.filters-ul li picture {
     margin-top: 2px;
 }
 

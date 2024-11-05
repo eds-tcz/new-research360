@@ -3,12 +3,13 @@
     padding: 0 !important;
 }
 
-.iap-heading  {
+.iap-heading {
     border-bottom: 1px solid #d8d6cf !important;
 }
 
 .iap-heading-wrapper {
     max-width: 1366px !important;
+    padding: 0 !important;
 }
 
 .heading-with-button {
@@ -22,8 +23,7 @@
     margin: 0 !important;
     color: #000;
 }
-.mlow-heading-h2
-{
+.mlow-heading-h2 {
     display: flex;
 }
 .heading-with-button p {

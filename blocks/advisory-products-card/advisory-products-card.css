@@ -11,8 +11,8 @@
 
 .advisory-products-card-wrapper {
     max-width: 1366px !important;
+    padding: 0 !important;
 }
-
 
 .mlow-heading-h2 h2 {
     padding-top: 11px;
@@ -30,7 +30,7 @@
 }
 
 .heading-advisory-button {
-    border: 1px solid #DDD;
+    border: 1px solid #ddd;
     width: 35%;
     border-radius: 8px;
     margin-right: 1%;
@@ -68,9 +68,9 @@
 /* Styling for the investment-ideas wrapper */
 .heading-advisory-button .mlow-heading-h2 table tbody tr td:nth-child(3) {
     display: ruby-text;
-    background: #3B3B3B;
+    background: #3b3b3b;
     padding: 7px 4px 6px 8px;
-    color: #FFF;
+    color: #fff;
     font-weight: 500;
     right: -7px;
     top: 10px;
@@ -88,7 +88,7 @@
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    border: solid 1px #DDD;
+    border: solid 1px #ddd;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -96,7 +96,6 @@
 
 .mlow-button-view-more table tbody tr td:nth-child(2),
 .mlow-button-view-more table tbody tr td:nth-child(3) {
-
     word-wrap: break-word;
     white-space: normal;
     padding: 4px 8px;
@@ -109,17 +108,16 @@
     line-height: 1.4;
 }
 
-
 .mlow-button-view-more table tbody tr td:nth-child(2),
 .mlow-button-view-more table tbody tr td:nth-child(3) {
     max-width: 200px;
 }
 
 .mlow-button-view-more table tbody tr:nth-child(2) td:nth-child(2) {
-    color: #2DB777;
+    color: #2db777;
 }
 
-.advisory-div3 table td>table tbody tr td:first-child {
+.advisory-div3 table td > table tbody tr td:first-child {
     border-right: 1px solid #ccc;
     padding-right: 10px;
 }
@@ -168,7 +166,7 @@
 }
 
 .adisory-div4 table tbody tr:first-child :first-child {
-    background: #EEE;
+    background: #eee;
     border-radius: 8px;
     padding: 5px 0px;
     text-align: center;
@@ -180,7 +178,7 @@
     font-weight: 600;
     padding: 2px 20px;
     text-align: center;
-    border: solid 1px #DDD;
+    border: solid 1px #ddd;
     border-radius: 8px;
     text-align: center;
     display: block;
@@ -193,31 +191,28 @@
     font-weight: 600;
     padding: 2px 20px;
     text-align: center;
-    border: solid 1px #DDD;
+    border: solid 1px #ddd;
     border-radius: 8px;
     text-align: center;
     display: block;
     color: #000;
     width: 48%;
     cursor: pointer;
-    background: #EEE;
+    background: #eee;
     color: #666;
     width: 48%;
 }
-
 
 .mlow-heading-h2 table {
     width: 100%;
     table-layout: fixed;
 }
 
-
 .mlow-heading-h2 table tbody tr {
     display: flex;
     justify-content: flex-start;
     height: 30px;
 }
-
 
 .mlow-heading-h2 table tbody tr td:nth-child(1) {
     width: 20%;
@@ -231,7 +226,6 @@
 .mlow-heading-h2 table tbody tr td:nth-child(3) {
     width: 40%;
 }
-
 
 .mlow-heading-h2 table td {
     padding: 8px;
@@ -255,14 +249,21 @@
     opacity: 0.5;
 }
 
-.advisory-products-card .heading-advisory-button:nth-of-type(1) .mlow-heading-h2,
-.advisory-products-card .heading-advisory-button:nth-of-type(1) .mlow-button-view-more,
-.advisory-products-card .heading-advisory-button:nth-of-type(3) .mlow-heading-h2,
-.advisory-products-card .heading-advisory-button:nth-of-type(3) .mlow-button-view-more {
+.advisory-products-card
+    .heading-advisory-button:nth-of-type(1)
+    .mlow-heading-h2,
+.advisory-products-card
+    .heading-advisory-button:nth-of-type(1)
+    .mlow-button-view-more,
+.advisory-products-card
+    .heading-advisory-button:nth-of-type(3)
+    .mlow-heading-h2,
+.advisory-products-card
+    .heading-advisory-button:nth-of-type(3)
+    .mlow-button-view-more {
     filter: blur(5px);
     opacity: 0.5;
 }
-
 
 .advisory-products-card .heading-advisory-button:nth-of-type(1)::after,
 .advisory-products-card .heading-advisory-button:nth-of-type(3)::after {
@@ -282,7 +283,6 @@
     border: none;
 }
 
-
 .advisory-products-card .heading-advisory-button:nth-of-type(1)::after:hover,
 .advisory-products-card .heading-advisory-button:nth-of-type(3)::after:hover {
     background-color: #ff4500;
@@ -295,10 +295,18 @@
     opacity: 0.5;
 }
 
-.advisory-products-card .heading-advisory-button:nth-of-type(1) .mlow-heading-h2,
-.advisory-products-card .heading-advisory-button:nth-of-type(1) .mlow-button-view-more,
-.advisory-products-card .heading-advisory-button:nth-of-type(3) .mlow-heading-h2,
-.advisory-products-card .heading-advisory-button:nth-of-type(3) .mlow-button-view-more {
+.advisory-products-card
+    .heading-advisory-button:nth-of-type(1)
+    .mlow-heading-h2,
+.advisory-products-card
+    .heading-advisory-button:nth-of-type(1)
+    .mlow-button-view-more,
+.advisory-products-card
+    .heading-advisory-button:nth-of-type(3)
+    .mlow-heading-h2,
+.advisory-products-card
+    .heading-advisory-button:nth-of-type(3)
+    .mlow-button-view-more {
     filter: blur(5px);
     opacity: 0.5;
 }
