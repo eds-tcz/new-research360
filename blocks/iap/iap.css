@@ -47,8 +47,14 @@
   .iap-card-title table td:nth-child(2) {
     position: relative; 
   }
-
- 
+.iap-card-title table td:nth-child(3)
+{
+    line-height: 0;
+    padding-left: 19px;
+}
+ .iap-card-title img{
+    height: 15px;
+ }
   .iap-card-title table td:nth-child(1)::after,
   .iap-card-title table td:nth-child(2)::after {
     content: ''; 
@@ -62,7 +68,7 @@
   pre
   {
     background-color: white;
-     padding: 0px 10px 0px 28px !important;
+     padding: 0px 50px 0px 0px !important;
         
   }
   .iap-card-title

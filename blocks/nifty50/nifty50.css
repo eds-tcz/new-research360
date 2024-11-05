@@ -34,7 +34,9 @@
 }
 
 .nifty-paragraph-3 {
-  margin-top: 10px;
+  margin-top: 0px;
+  font-weight: 500 !important;
+  font-size: 24px !important;
 }
 
 .nifty-paragraph-1 {
@@ -135,7 +137,7 @@
 
 hr {
   border: none;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #ddd;
 }
 
 .time-labels {
@@ -147,4 +149,19 @@ hr {
   right: 20px;
   color: #666;
   font-size: 12px;
+}
+.nifty-paragraph-4
+{
+      margin-left: 29%;
+    margin-top: -9%;
+    position: relative;
+    color: #2DB777;
+        line-height: 18.75px;
+        font-size: 14px !important;
+    font-weight: 400 !important;
+    font-family: "Roboto",sans-serif !important;
+}
+.nifty-paragraph-4 img
+{
+  height: 15px;
 }
