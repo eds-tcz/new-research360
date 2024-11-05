@@ -87,3 +87,7 @@
     line-height: 18.77px;
     text-align: left;
 }
+
+.faqs-accordion-wrapper{
+    max-width: 1385px !important;
+}
