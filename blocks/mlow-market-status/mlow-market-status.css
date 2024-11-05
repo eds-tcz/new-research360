@@ -125,19 +125,20 @@
 }
 
 .market-card-button a {
-  padding: 6px 12px;
-  background: #fff;
+  padding: 6px 12px !important;
+  background: #fff !important;
   display: block;
-  color: #000;
-  border: 1px solid #fcaf17;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: center;
-  border-radius: 6px;
-  text-decoration: none;
+  color: #000 !important;
+  border: 1px solid #fcaf17 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  text-align: center !important;
+  border-radius: 6px !important;
+  text-decoration: none !important;
+  width: 100% !important
 }
 
 .market-card-button p {
-  margin: 24px 20px 20px;
+  margin: -12px 20px -4px;
   width: 100%;
 }
