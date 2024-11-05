@@ -1,17 +1,14 @@
-.mlow-market-comp-heading-container {
+.iap-heading-container {
     margin: 20px 8px;
     padding: 0 !important;
 }
 
-.mlow-market-comp-heading {
+.iap-heading  {
     border-bottom: 1px solid #d8d6cf !important;
-    padding-bottom: 12px;
-    margin-bottom: 16px;
 }
 
-.mlow-market-comp-heading-wrapper {
+.iap-heading-wrapper {
     max-width: 1366px !important;
-    padding: 0 !important;
 }
 
 .heading-with-button {
@@ -20,11 +17,15 @@
 }
 
 .mlow-heading-h2 h2 {
+    padding-top: 11px;
     font-size: 22px;
     margin: 0 !important;
     color: #000;
 }
-
+.mlow-heading-h2
+{
+    display: flex;
+}
 .heading-with-button p {
     margin: 0 !important;
 }

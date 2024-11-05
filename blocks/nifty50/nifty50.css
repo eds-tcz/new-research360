@@ -5,6 +5,7 @@
 }
 
 .nifty50-container {
+<<<<<<< HEAD
     padding-top: 20px;
 }
 
@@ -15,6 +16,18 @@
     overflow: hidden;
     padding: 16px !important;
     margin-bottom: 0 !important;
+=======
+  padding-top: 2%;
+}
+
+.nifty-cards {
+  width: 32%;
+  border: 1px solid #ddd !important;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  padding: 16px !important;
+  margin-bottom: 0 !important;
+>>>>>>> cbcbfa6a7df0cc3d8e81e29b0e58448422b142e8
 
     /* height: fit-content; */
 }
@@ -35,7 +48,13 @@
 }
 
 .nifty-paragraph-3 {
+<<<<<<< HEAD
     margin-top: 10px;
+=======
+  margin-top: 0px;
+  font-weight: 500 !important;
+  font-size: 24px !important;
+>>>>>>> cbcbfa6a7df0cc3d8e81e29b0e58448422b142e8
 }
 
 .nifty-paragraph-1 {
@@ -135,8 +154,13 @@
 }
 
 hr {
+<<<<<<< HEAD
     border: none;
     border-top: 1px solid #eee;
+=======
+  border: none;
+  border-top: 1px solid #ddd;
+>>>>>>> cbcbfa6a7df0cc3d8e81e29b0e58448422b142e8
 }
 
 .time-labels {
@@ -148,4 +172,19 @@ hr {
     right: 20px;
     color: #666;
     font-size: 12px;
+}
+.nifty-paragraph-4
+{
+      margin-left: 29%;
+    margin-top: -9%;
+    position: relative;
+    color: #2DB777;
+        line-height: 18.75px;
+        font-size: 14px !important;
+    font-weight: 400 !important;
+    font-family: "Roboto",sans-serif !important;
+}
+.nifty-paragraph-4 img
+{
+  height: 15px;
 }
