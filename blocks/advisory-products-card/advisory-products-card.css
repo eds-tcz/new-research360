@@ -1,0 +1,118 @@
+.advisory-products-card-container {
+    margin: 20px 8px;
+    padding: 0 !important;
+}
+
+.advisory-products-card {
+    border-bottom: 1px solid #d8d6cf !important;
+    display: flex;
+    justify-content: space-between;
+}
+
+.advisory-products-card-wrapper {
+    max-width: 1366px !important;
+}
+
+
+.mlow-heading-h2 h2 {
+    padding-top: 11px;
+    font-size: 22px;
+    margin: 0 !important;
+    color: #000;
+}
+
+.mlow-heading-h2 {
+    display: flex;
+}
+
+.heading-advisory-button p {
+    margin: 0 !important;
+}
+
+.heading-advisory-button {
+    border: 1px solid #DDD;
+    width: 35%;
+    border-radius: 8px;
+    margin-right: 1%;
+    padding: 12px;
+}
+
+.mlow-button-view-more a {
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mlow-button-view-more a::after {
+    content: " \003e";
+    /* Unicode for '>' */
+    margin-left: 5px;
+    /* Add space between text and caret */
+    font-size: 14px;
+    /* Adjust the caret size to match the text */
+    color: inherit;
+    /* Make scure it inherits the color of the text */
+}
+
+.heading-advisory-button .mlow-heading-h2 table tbody tr td:first-child {
+    margin-bottom: 100%;
+    background: #fee9e7;
+    color: #f44437; 
+    padding: 4px 8px;
+    border-radius: 8px;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+/* Styling for the investment-ideas wrapper */
+.heading-advisory-button .mlow-heading-h2 table tbody tr td:nth-child(3) {
+    display: ruby-text;
+    background: #3B3B3B;
+    padding: 7px 25px 6px 8px;
+    color: #FFF;
+    font-weight: 500;
+    right: -7px;
+    top: 10px;
+    border-radius: 8px 0 0 8px;
+    font-size: 12px;
+    margin-left: 34%;
+}
+.heading-advisory-button .mlow-heading-h2 table tbody tr td:nth-child(2) code
+{
+    color: #666;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+}
+.mlow-button-view-more table tbody tr td img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: solid 1px #DDD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Apply to second and third td inside .mlow-button-view-more */
+.mlow-button-view-more table tbody tr td:nth-child(2),
+.mlow-button-view-more table tbody tr td:nth-child(3) {
+    /* Make sure the td content is split into multiple lines */
+    word-wrap: break-word; /* Break long words */
+    white-space: normal;  /* Allow content to wrap normally */
+    padding: 4px 8px; /* Optional: Adjust padding */
+}
+
+/* Optionally, you can style the <code> and <pre> elements if needed */
+.mlow-button-view-more table tbody tr td:nth-child(2) code,
+.mlow-button-view-more table tbody tr td:nth-child(3) pre {
+    display: block; /* Makes <code> and <pre> elements behave like block-level elements */
+    white-space: normal; /* Allow text to wrap inside <pre> */
+    line-height: 1.4; /* Adjust line-height to make text more readable */
+}
+
+/* You might want to adjust the width of the td if necessary to make it responsive */
+.mlow-button-view-more table tbody tr td:nth-child(2),
+.mlow-button-view-more table tbody tr td:nth-child(3) {
+    max-width: 200px; /* Adjust max-width to control the width of the td */
+}
