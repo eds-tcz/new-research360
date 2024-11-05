@@ -1,3 +1,5 @@
+/* stylelint-disable no-descending-specificity */
+
 .mlow-market-sentiments-wrapper {
   max-width: 1366px !important;
   margin: auto !important;

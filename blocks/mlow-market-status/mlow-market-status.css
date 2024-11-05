@@ -1,8 +1,9 @@
 /* stylelint-disable no-descending-specificity */
-.mlow-market-status-wrapper
-{
+
+.mlow-market-status-wrapper {
   max-width: 90% !important;
 }
+
 .mlow-market-status {
   display: flex;
   gap: 20px;
