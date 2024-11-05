@@ -1,6 +1,7 @@
 /* stylelint-disable no-descending-specificity */
 .ace-investors-wrapper {
-    max-width: 90% !important;
+    max-width: 1366px !important;
+    padding: 0 !important;
 }
 
 .mlow-market-status {
@@ -17,21 +18,17 @@
     display: flex;
     flex-direction: column;
 }
-.ace-investors 
-{
+.ace-investors {
     display: flex;
     gap: 1%;
 }
-.ace-investors .ace-investors-head:first-child 
-{
+.ace-investors .ace-investors-head:first-child {
     width: 25%;
 }
-.ace-investors .ace-investors-head:nth-child(2)
-{
+.ace-investors .ace-investors-head:nth-child(2) {
     width: 25%;
 }
-.ace-investors .ace-investors-head:nth-child(3)
-{
+.ace-investors .ace-investors-head:nth-child(3) {
     width: 47%;
 }
 
@@ -142,41 +139,42 @@
 }
 
 .market-card-button a {
-  padding: 6px 12px !important;
-  background: #fff !important;
-  display: block;
-  color: #000 !important;
-  border: 1px solid #fcaf17 !important;
-  cursor: pointer !important;
-  transition: all 0.3s ease !important;
-  text-align: center !important;
-  border-radius: 6px !important;
-  text-decoration: none !important;
-  width: 100% !important
+    padding: 6px 12px !important;
+    background: #fff !important;
+    display: block;
+    color: #000 !important;
+    border: 1px solid #fcaf17 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    text-align: center !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    width: 100% !important;
 }
 
 .market-card-button p {
-  margin: -12px 20px -4px;
-  width: 100%;
+    margin: -12px 20px -4px;
+    width: 100%;
 }
-.market-card-table
-{
+.market-card-table {
     min-height: 211px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.market-card-table >p
-{
+.market-card-table > p {
     font-size: 15px;
     white-space: nowrap;
 }
-.market-card-table td p
-{
+.market-card-table td p {
     white-space: nowrap;
 }
-.ace-investors-head .market-card-table-wrap:first-child table:first-child tbody tr td:nth-child(2)
-{
-        padding-top: 46px;
+.ace-investors-head
+    .market-card-table-wrap:first-child
+    table:first-child
+    tbody
+    tr
+    td:nth-child(2) {
+    padding-top: 46px;
     white-space: nowrap;
 }

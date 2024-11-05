@@ -1,17 +1,14 @@
-.iap-wrapper
-{
-    max-width: 90% !important;
+.iap-wrapper {
+    max-width: 1366px !important;
+    padding: 0 !important;
 }
-.iap
-{
+.iap {
     display: flex;
 }
-.iap-card-image > p
-{
+.iap-card-image > p {
     display: flex;
 }
-.iap-card-image > p > picture
-{
+.iap-card-image > p > picture {
     width: 42px;
     height: 42px;
     padding: 2px;
@@ -22,63 +19,55 @@
     align-items: center;
     justify-content: center;
 }
-.iap-card-image > p > code
-{
-        margin-top: 10px;
+.iap-card-image > p > code {
+    margin-top: 10px;
     margin-left: 10px;
     font-size: 16px;
     font-weight: 700;
 }
-.iap-image-card
-{
-    border: 1px solid #DDD;
+.iap-image-card {
+    border: 1px solid #ddd;
     width: 35%;
     border-radius: 8px;
     margin-right: 1%;
     padding: 12px;
 }
-.iap-card-image
-{
-    position: relative; 
-    border-bottom: 1px solid #ddd; 
+.iap-card-image {
+    position: relative;
+    border-bottom: 1px solid #ddd;
     padding-bottom: 4px;
 }
- .iap-card-title table td:nth-child(1),
-  .iap-card-title table td:nth-child(2) {
-    position: relative; 
-  }
-.iap-card-title table td:nth-child(3)
-{
+.iap-card-title table td:nth-child(1),
+.iap-card-title table td:nth-child(2) {
+    position: relative;
+}
+.iap-card-title table td:nth-child(3) {
     line-height: 0;
     padding-left: 19px;
 }
- .iap-card-title img{
+.iap-card-title img {
     height: 15px;
- }
-  .iap-card-title table td:nth-child(1)::after,
-  .iap-card-title table td:nth-child(2)::after {
-    content: ''; 
+}
+.iap-card-title table td:nth-child(1)::after,
+.iap-card-title table td:nth-child(2)::after {
+    content: "";
     position: absolute;
-    top: 10px;  
+    top: 10px;
     right: 0;
-    width: 1px; 
-    height: 50px; 
-    background-color: #dee2e6!important 
-  }
-  pre
-  {
+    width: 1px;
+    height: 50px;
+    background-color: #dee2e6 !important;
+}
+pre {
     background-color: white;
-     padding: 0px 50px 0px 0px !important;
-        
-  }
-  .iap-card-title
-  {
-        position: relative;
+    padding: 0px 50px 0px 0px !important;
+}
+.iap-card-title {
+    position: relative;
     border-bottom: 1px solid #ddd;
     padding-bottom: 0px;
-  }
-  .iap-card-button
-  {
+}
+.iap-card-button {
     background: #06c39b;
     min-width: 150px;
     height: 40px;
@@ -90,15 +79,13 @@
     font-weight: 700;
     text-transform: capitalize;
     line-height: 16.41px;
-        cursor: pointer;
-  }
-  .iap-card-button > p
-  {
+    cursor: pointer;
+}
+.iap-card-button > p {
     padding-top: 10px !important;
-  }
-  .iap-card-title > table > tbody > tr > td> pre > code
-  {
-        color: #666;
+}
+.iap-card-title > table > tbody > tr > td > pre > code {
+    color: #666;
     opacity: unset !important;
     margin-bottom: 0;
     font-family: Roboto;
@@ -106,13 +93,11 @@
     font-weight: 400;
     line-height: 16.41px;
     text-align: left;
-  }
-.iap-card-data > table
-{
+}
+.iap-card-data > table {
     width: 110%;
     table-layout: fixed;
 }
-.iap-card-data
-{
+.iap-card-data {
     padding-top: 10px;
 }

@@ -1,17 +1,14 @@
-.basket-wrapper
-{
-    max-width: 90% !important;
+.basket-wrapper {
+    max-width: 1366px !important;
+    padding: 0 !important;
 }
-.basket
-{
+.basket {
     display: flex;
 }
-.basket-card-image > p
-{
+.basket-card-image > p {
     display: flex;
 }
-.basket-card-image > p > picture
-{
+.basket-card-image > p > picture {
     width: 42px;
     height: 42px;
     padding: 2px;
@@ -22,89 +19,76 @@
     align-items: center;
     justify-content: center;
 }
-.basket-card-image > p > code
-{
-        margin-top: 10px;
+.basket-card-image > p > code {
+    margin-top: 10px;
     margin-left: 10px;
     font-size: 16px;
     font-weight: 700;
 }
-.basket-image-card
-{
-    border: 1px solid #DDD;
+.basket-image-card {
+    border: 1px solid #ddd;
     width: 35%;
     border-radius: 8px;
     margin-right: 1%;
     padding: 12px;
 }
-.basket-card-image
-{
-    position: relative; 
-    border-bottom: 1px solid #ddd; 
+.basket-card-image {
+    position: relative;
+    border-bottom: 1px solid #ddd;
     padding-bottom: 4px;
 }
- .basket-card-title table td:nth-child(1),
-  .basket-card-title table td:nth-child(2) {
-    position: relative; 
-  }
-.basket-card-title table td:nth-child(3)
-{
+.basket-card-title table td:nth-child(1),
+.basket-card-title table td:nth-child(2) {
+    position: relative;
+}
+.basket-card-title table td:nth-child(3) {
     line-height: 0;
     padding-left: 19px;
 }
- .basket-card-title img{
+.basket-card-title img {
     height: 15px;
- }
-  .basket-card-title table td:nth-child(1)::after,
-  .basket-card-title table td:nth-child(2)::after {
-    content: ''; 
+}
+.basket-card-title table td:nth-child(1)::after,
+.basket-card-title table td:nth-child(2)::after {
+    content: "";
     position: absolute;
-    top: 10px;  
+    top: 10px;
     right: 0;
-    width: 1px; 
-    height: 50px; 
-    background-color: #dee2e6!important 
-  }
-  .basket-card-data pre
-  {
+    width: 1px;
+    height: 50px;
+    background-color: #dee2e6 !important;
+}
+.basket-card-data pre {
     background-color: white;
-     padding: 0px 50px 0px 0px !important;
-        
-  }
-  .basket-card-data pre code
-  {
+    padding: 0px 50px 0px 0px !important;
+}
+.basket-card-data pre code {
     font-size: 12px;
-  }
-  .basket-card-data table tbody tr td:nth-child(3)
-  {
+}
+.basket-card-data table tbody tr td:nth-child(3) {
     margin-left: 20px;
     line-height: 1;
     width: 32%;
-  }
-  .basket-card-data table tbody tr td:nth-child(2)
-  {
+}
+.basket-card-data table tbody tr td:nth-child(2) {
     line-height: 1;
     white-space: nowrap;
-  }
-  .basket-card-data table tbody tr td:first-child
-  {
+}
+.basket-card-data table tbody tr td:first-child {
     line-height: 1;
     width: 28%;
-  }
-  .basket-card-data table tbody tr td code
-  {
+}
+.basket-card-data table tbody tr td code {
     font-size: 14px;
     color: #666;
-  }
-  .basket-card-title
-  {
+}
+.basket-card-title {
     height: 125px;
-        position: relative;
+    position: relative;
     border-bottom: 1px solid #ddd;
     padding-bottom: 0px;
-  }
-  .basket-card-button
-  {
+}
+.basket-card-button {
     background: #06c39b;
     min-width: 150px;
     height: 40px;
@@ -116,15 +100,13 @@
     font-weight: 700;
     text-transform: capitalize;
     line-height: 16.41px;
-        cursor: pointer;
-  }
-  .basket-card-button > p
-  {
+    cursor: pointer;
+}
+.basket-card-button > p {
     padding-top: 10px !important;
-  }
-  .basket-card-title > table > tbody > tr > td> pre > code
-  {
-        color: #666;
+}
+.basket-card-title > table > tbody > tr > td > pre > code {
+    color: #666;
     opacity: unset !important;
     margin-bottom: 0;
     font-family: Roboto;
@@ -132,13 +114,11 @@
     font-weight: 400;
     line-height: 16.41px;
     text-align: left;
-  }
-.basket-card-data > table
-{
+}
+.basket-card-data > table {
     width: 100%;
     table-layout: fixed;
 }
-.basket-card-data
-{
+.basket-card-data {
     padding-top: 10px;
 }

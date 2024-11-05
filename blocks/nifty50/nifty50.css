@@ -1,9 +1,22 @@
 .nifty50-wrapper {
-  width: 90%;
-  max-width: 90% !important;
+    width: 90%;
+    max-width: 1366px !important;
+    padding: 0 !important;
 }
 
 .nifty50-container {
+<<<<<<< HEAD
+    padding-top: 20px;
+}
+
+.nifty-cards {
+    width: 30%;
+    border: 1px solid #ddd !important;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    padding: 16px !important;
+    margin-bottom: 0 !important;
+=======
   padding-top: 2%;
 }
 
@@ -14,84 +27,89 @@
   overflow: hidden;
   padding: 16px !important;
   margin-bottom: 0 !important;
+>>>>>>> cbcbfa6a7df0cc3d8e81e29b0e58448422b142e8
 
-  /* height: fit-content; */
+    /* height: fit-content; */
 }
 
 .nifty50 {
-  width: 100%;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
-  display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    display: flex;
 }
 
 .flex-wrapper {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .nifty-paragraph-3 {
+<<<<<<< HEAD
+    margin-top: 10px;
+=======
   margin-top: 0px;
   font-weight: 500 !important;
   font-size: 24px !important;
+>>>>>>> cbcbfa6a7df0cc3d8e81e29b0e58448422b142e8
 }
 
 .nifty-paragraph-1 {
-  font-size: 16px;
-  font-weight: 500;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .nifty-paragraph-2 {
-  color: #999;
-  font-size: 12px !important;
+    color: #999;
+    font-size: 12px !important;
 }
 
 .graph-container {
-  padding-bottom: 15px;
+    padding-bottom: 15px;
 }
 
 .time-nav {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 15px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
 .time-tab {
-  padding: 4px 15px;
-  border-radius: 15px;
-  border: 1px solid #b6b6b6 !important;
-  background: transparent;
-  cursor: pointer;
-  font-size: 14px;
-  color: #b6b6b6 !important;
+    padding: 4px 15px;
+    border-radius: 15px;
+    border: 1px solid #b6b6b6 !important;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    color: #b6b6b6 !important;
 }
 
 .time-tab.active {
-  background: #ffa500;
-  color: black !important;
-  border-color: #ffa500;
+    background: #ffa500;
+    color: black !important;
+    border-color: #ffa500;
 }
 
 .time-tab:hover {
-  background-color: white;
-  color: black !important;
+    background-color: white;
+    color: black !important;
 }
 
 .graph-area {
-  height: 92px;
-  background: linear-gradient(
-    180deg,
-    rgb(242 7 49 / 91%) 0%,
-    rgb(70 64 65 / 13%) 100%
-  );
-  position: relative;
-  border-radius: 8px;
+    height: 92px;
+    background: linear-gradient(
+        180deg,
+        rgb(242 7 49 / 91%) 0%,
+        rgb(70 64 65 / 13%) 100%
+    );
+    position: relative;
+    border-radius: 8px;
 }
 
-/* 
+/*
 .graph-area::after {
     content: '';
     position: absolute;
@@ -99,14 +117,14 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
-        linear-gradient(to right bottom, 
-            transparent 49.9%, 
-            #ffb6c1 50%, 
+    background:
+        linear-gradient(to right bottom,
+            transparent 49.9%,
+            #ffb6c1 50%,
             transparent 50.1%),
-        linear-gradient(to right top, 
-            transparent 49.9%, 
-            #ffb6c1 50%, 
+        linear-gradient(to right top,
+            transparent 49.9%,
+            #ffb6c1 50%,
             transparent 50.1%);
     opacity: 0.5;
     pointer-events: none;
@@ -127,28 +145,33 @@
 
 /* Price labels */
 .graph-container::before {
-  content: '24800.00';
-  position: absolute;
-  top: 40px;
-  right: 20px;
-  color: #666;
-  font-size: 12px;
+    content: "24800.00";
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    color: #666;
+    font-size: 12px;
 }
 
 hr {
+<<<<<<< HEAD
+    border: none;
+    border-top: 1px solid #eee;
+=======
   border: none;
   border-top: 1px solid #ddd;
+>>>>>>> cbcbfa6a7df0cc3d8e81e29b0e58448422b142e8
 }
 
 .time-labels {
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  bottom: -25px;
-  left: 20px;
-  right: 20px;
-  color: #666;
-  font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: -25px;
+    left: 20px;
+    right: 20px;
+    color: #666;
+    font-size: 12px;
 }
 .nifty-paragraph-4
 {
