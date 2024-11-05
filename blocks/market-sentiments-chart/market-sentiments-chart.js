@@ -11,8 +11,8 @@ export default function decorate(block) {
   });
 }
 function getIndianIndices() {
-  const url = "https://research360api.motilaloswal.com/api/getapisdata";
-  const apiName = "GET_INDIAN_INDICES_WEB";
+  const url = 'https://research360api.motilaloswal.com/api/getapisdata';
+  const apiName = 'GET_INDIAN_INDICES_WEB';
   fetch(`${url}?api_name=${apiName}&index_code=1`)
       .then(response => {
           if (!response.ok) {
@@ -21,28 +21,28 @@ function getIndianIndices() {
           return response.json();
       })
       .then(data => {
-          console.log("API Call Successful:", data);
+          console.log('API Call Successful:', data);
           let marketData = data?.data
           populateIndianIndices(marketData)
       })
       .catch(error => {
-          console.error("API Call Failed:", error);
+          console.error('API Call Failed:', error);
       });
 };
 function populateIndianIndices(marketData) {
-  const container = document.querySelector(".market-sentiments-chart");
-  container.innerHTML = ""; // Clear any existing content
+  const container = document.querySelector('.market-sentiments-chart');
+  container.innerHTML = ''; // Clear any existing content
   marketData.forEach((data) => {
-    const perChangeSign = data.per_change > 0 ? "+" : "-";
+    const perChangeSign = data.per_change > 0 ? '+' : '-';
     const formattedDataChange = Math.abs(parseFloat(data.change).toFixed(2));
     const formattedPerChange = Math.abs(parseFloat(data.per_change).toFixed(2));
     // Create the HTML structure using template literals
     const marketDiv = `
-      <div class="market-sentiments-div">
-        <div class="market-sentiments-1">
-          <p class="market-sentiment-text-1">${data.index_nm}</p>
-          <p class="market-sentiment-text-2">${data.ltp}</p>
-          <p class="market-sentiment-text-3" style="color: ${data.per_change > 0 ? 'green' : 'red'};">
+      <div class='market-sentiments-div'>
+        <div class='market-sentiments-1'>
+          <p class='market-sentiment-text-1'>${data.index_nm}</p>
+          <p class='market-sentiment-text-2'>${data.ltp}</p>
+          <p class='market-sentiment-text-3' style='color: ${data.per_change > 0 ? 'green' : 'red'};'>
             ${perChangeSign}${formattedDataChange} (${perChangeSign}${formattedPerChange}%)
           </p>
         </div>

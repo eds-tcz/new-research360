@@ -19,22 +19,22 @@ export default function decorate(block) {
   });
   // Select the parent element that contains the list items
   if(!isListenerAdded){
-    document.querySelector(".mlow-market-head .market-card-filter").addEventListener("click", function(e) {
+    document.querySelector('.mlow-market-head .market-card-filter').addEventListener('click', function(e) {
       // Check if the clicked element is an <li>
-      if (e.target.closest("li")) {
+      if (e.target.closest('li')) {
           e.preventDefault(); // Prevent the default action
           // Get the anchor tag within the clicked <li>
-          const anchorText = e.target.closest("li").querySelector("a").textContent;
+          const anchorText = e.target.closest('li').querySelector('a').textContent;
           console.log(anchorText); // Log the anchor text
           getMarketGainers(anchorText);
-          const listItems = this.querySelectorAll("li");
+          const listItems = this.querySelectorAll('li');
           listItems.forEach((item) => {
-            item.style.backgroundColor = ""; // Reset background color
-            item.style.fontWeight = "";
+            item.style.backgroundColor = ''; // Reset background color
+            item.style.fontWeight = '';
           });
           // Add background color to the clicked <li>
-          e.target.closest("li").style.backgroundColor = "#fcaf17";
-          e.target.closest("li").style.fontWeight = "bold";
+          e.target.closest('li').style.backgroundColor = '#fcaf17';
+          e.target.closest('li').style.fontWeight = 'bold';
           isListenerAdded = true;
       }
     });
@@ -42,25 +42,25 @@ export default function decorate(block) {
   }
 }
 function getMarketGainers(period) {
-  const url = "https://research360api.motilaloswal.com/api/getapisdata";
-  const apiName = "EQ_MKT_GAINERS_LOSERS_WEB";
+  const url = 'https://research360api.motilaloswal.com/api/getapisdata';
+  const apiName = 'EQ_MKT_GAINERS_LOSERS_WEB';
   const params = new URLSearchParams({
     api_name: apiName,
-    exchange: "NSE",
-    index_code: "22115",
-    fno_flag: "",
-    mcap_type: "",
-    price_start: "",
-    price_end: "",
-    sector: "",
-    industry: "",
-    flag: "G",
+    exchange: 'NSE',
+    index_code: '22115',
+    fno_flag: '',
+    mcap_type: '',
+    price_start: '',
+    price_end: '',
+    sector: '',
+    industry: '',
+    flag: 'G',
     period: period,
-    sortcolumn: "per_change",
-    sortdirection: "DESC",
-    search: "",
-    pagenumber: "1",
-    pagesize: "4"
+    sortcolumn: 'per_change',
+    sortdirection: 'DESC',
+    search: '',
+    pagenumber: '1',
+    pagesize: '4'
   });
 
   fetch(`${url}?${params.toString()}`)
@@ -71,16 +71,16 @@ function getMarketGainers(period) {
       return response.json();
     })
     .then(data => {
-      console.log("Market Gainers API Call Successful:", data);
+      console.log('Market Gainers API Call Successful:', data);
       let gainersData = data?.data;
       populateMarketGainers(gainersData);
     })
     .catch(error => {
-      console.error("Market Gainers API Call Failed:", error);
+      console.error('Market Gainers API Call Failed:', error);
     });
 };
 function populateMarketGainers(gainersData) {
-  const tableBody = document.querySelector(".market-card-table tbody");
+  const tableBody = document.querySelector('.market-card-table tbody');
 
   // Clear existing rows except for the header row
   tableBody.innerHTML = `
@@ -94,7 +94,7 @@ function populateMarketGainers(gainersData) {
 
   // Populate the table with new rows from gainersData
   gainersData.forEach((data) => {
-    const perChangeSign = data.per_change > 0 ? "+" : "-";
+    const perChangeSign = data.per_change > 0 ? '+' : '-';
     const formattedPrice = parseFloat(data.ltp).toFixed(2);
     const formattedPerChange = `${perChangeSign}${Math.abs(data.per_change).toFixed(2)}%`;
 
@@ -103,7 +103,7 @@ function populateMarketGainers(gainersData) {
         <td>${data.compname}</td>
         <td>Graph</td>
         <td>${formattedPrice}</td>
-        <td style="color: ${data.per_change > 0 ? 'green' : 'red'};">${formattedPerChange}</td>
+        <td style='color: ${data.per_change > 0 ? 'green' : 'red'};'>${formattedPerChange}</td>
       </tr>
     `;
 
@@ -112,4 +112,4 @@ function populateMarketGainers(gainersData) {
   });
 };
 
-getMarketGainers("1H");
+getMarketGainers('1H');
