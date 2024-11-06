@@ -44,10 +44,6 @@
   cursor: pointer;
 }
 
-.mlow-button-view-more {
-  border-bottom: 1px solid #d8d6cf !important;
-}
-
 .mlow-button-view-more a::after {
   content: ' \003e';
   margin-left: 5px;

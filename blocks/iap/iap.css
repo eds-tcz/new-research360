@@ -23,6 +23,7 @@
   margin-top: 10px;
   margin-left: 10px;
   font-size: 16px;
+  font-family: Roboto;
   font-weight: 700;
 }
 .iap-image-card {
@@ -135,6 +136,6 @@ pre {
   color: black;
 }
 .iap-card-data table tbody tr td picture img {
-    width: 20px;
-    height: 18px;
+    width: 22px;
+    height: 20px;
 }
