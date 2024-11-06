@@ -23,6 +23,8 @@ export default function decorate(block) {
           const searchImage = document.createElement('img');
           searchImage.src = '../../images/mlow-market-nav-1/search-icon.svg'; // Set your search icon URL
           searchImage.alt = 'Search Icon';
+          searchImage.width = 24;
+          searchImage.height = 24;
           searchIcon.appendChild(searchImage);
           const inputField = document.createElement('input');
           inputField.type = 'text';
