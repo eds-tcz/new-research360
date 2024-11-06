@@ -2,7 +2,6 @@
 .mlow-market-status-wrapper {
   max-width: 1366px !important;
   padding: 0 !important;
-  margin: 0 !important;
 }
 
 .mlow-market-status {
@@ -155,6 +154,10 @@
 }
 
 /* <-------- Corporate Actions Classes Below --------> */
+
+.mlow-latest-in-news-container .mlow-market-status-wrapper {
+  margin: 0 !important;
+}
 
 .corporate-actions {
   width: 100% !important;
