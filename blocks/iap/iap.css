@@ -44,7 +44,7 @@
 }
 .iap-card-title table td:nth-child(3) {
   line-height: 0;
-  padding-left: 14px;
+  padding-left: 10px;
   color: #666;
   opacity: unset !important;
   margin-bottom: 0;
