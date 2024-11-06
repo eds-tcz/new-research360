@@ -135,6 +135,6 @@ pre {
   color: black;
 }
 .iap-card-data table tbody tr td picture img {
-  width: 20px;
-  height: 20px;
+    width: 20px;
+    height: 18px;
 }
