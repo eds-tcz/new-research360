@@ -20,10 +20,19 @@
     justify-content: center;
 }
 .basket-card-image > p > code {
-    margin-top: 10px;
+    margin-top: 0px;
     margin-left: 10px;
     font-size: 16px;
     font-weight: 700;
+}
+.basket-card-image > p:nth-child(2)
+{
+    margin-left: 10%;
+    margin-top: -6%;
+    font-weight: 400 !important;
+    color: #666;
+    font-family: "Roboto", sans-serif !important;
+    font-size: 12px !important;
 }
 .basket-image-card {
     border: 1px solid #ddd;
@@ -76,14 +85,40 @@
 }
 .basket-card-data table tbody tr td:first-child {
     line-height: 1;
-    width: 28%;
+    /* width: 28%; */
 }
 .basket-card-data table tbody tr td code {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     color: #666;
 }
+.basket-card-data table tbody tr:first-child td:first-child
+{
+        padding: 2px 8px;
+    border-right: 1px solid #d8d6cf;
+}
+.basket-card-data table tbody tr:first-child td:nth-child(2)
+{
+        padding: 0 8px;
+        padding-bottom: 13px;
+    border-right: 1px solid #d8d6cf;
+}
+.basket-card-data table tbody tr:first-child td:nth-child(3)
+{
+    padding-bottom: 13px;
+}
+.basket-card-data table tbody tr td table tbody tr td 
+{
+    border-right: 0px solid #d8d6cf !important;
+}
+.basket-card-data table tbody tr td table tbody tr:nth-child(2) td code
+{
+    color: #2DB777;
+    font-size: 16px;
+    font-weight: 700;
+}
 .basket-card-title {
-    height: 125px;
+    height: 95px;
     position: relative;
     border-bottom: 1px solid #ddd;
     padding-bottom: 0px;
@@ -114,6 +149,9 @@
     font-weight: 400;
     line-height: 16.41px;
     text-align: left;
+}
+.basket-card-title p code{
+    font-family: Arial, Helvetica, sans-serif;
 }
 .basket-card-data > table {
     width: 100%;
