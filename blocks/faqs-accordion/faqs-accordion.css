@@ -41,6 +41,9 @@
     background-position: 99% 50%;
     background-size: 16px;
 }
+.gainerImage{
+    background-image: url("../../images/mlow-market-nav-1/gainerFirst.png");
+}
 
 .faqs-accordion-question.show {
     background-image: url("../../images/mlow-market-nav-1/minus-sign.png");
