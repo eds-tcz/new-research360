@@ -178,39 +178,3 @@
   padding-top: 46px;
   white-space: nowrap;
 }
-
-.corporate-actions ul li {
-  background: none;
-  border: 0 !important;
-  border-radius: 0px;
-}
-
-.corporate-actions ul {
-  border-bottom: 1px solid #d8d6cf;
-}
-.corporate-actions ul li:hover {
-  border-bottom: 2px solid #fcaf17 !important;
-  color: #d8d6cf;
-}
-.corporate-actions table tr {
-  background: #fff !important;
-}
-.corporate-actions table tr p{
- margin: 5px !important;
-}
-.corporate-actions table tr td {
-  font-size: 14px !important;
-  font-weight: 500;
-  padding-left: 12px;
-  border-bottom: 1px solid #d8d6cf;
-}
-.corporate-actions table tr td > :first-child {
-  color: #000 !important;
-}
-.corporate-actions tr:nth-child(n + 2):hover {
-  border: none !important;
-}
-.corporate-actions li:first-child {
-  background-color: #fff !important;
-  border-bottom: 2px solid #fcaf17 !important;
-}
