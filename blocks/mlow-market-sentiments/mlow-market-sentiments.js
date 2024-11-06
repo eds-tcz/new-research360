@@ -99,3 +99,153 @@ export default function decorate(block) {
     }
   });
 }
+function initDiiCashChart() {
+  const chartContainers = document.getElementsByClassName('cf-graph');
+// Ensure that there's a second container available
+  if (chartContainers[1]) {
+  const container = chartContainers[1]; // Accessing the second container
+
+  // Create the chart inside the container
+  const chart = LightweightCharts.createChart(container, {
+    layout: {
+      textColor: 'black',
+      background: { type: 'solid', color: 'white' },
+    },
+    width: container.offsetWidth,
+    height: 100, // Adjusted height for smaller bars
+    rightPriceScale: {
+      visible: false,
+  },
+  });
+
+  // Add the histogram series with the specified color
+  const histogramSeries = chart.addHistogramSeries({
+    color: '#06c39b', // Updated color
+    base: 0, // Baseline will still be 0 (negative values will go below this line)
+    priceScaleId: '',
+  });
+
+  // Set the data for the histogram series with only negative values
+  const data = [
+    { value: 5, time: 1642425322 }, // All negative values
+    { value: 10, time: 1642511722 },
+    { value: 8, time: 1642598122 },
+    { value: 12, time: 1642684522 },
+    { value: 6, time: 1642770922 },
+  ];
+
+  histogramSeries.setData(data);
+
+  // Adjust the time scale to fit the content and add spacing between bars
+  chart.applyOptions({
+    timeScale: {
+      barSpacing: 20, // Adjust this value to increase/decrease space between bars
+    },
+  });
+
+  // Fit the time scale to ensure the data is visible with the spacing
+  chart.timeScale().fitContent();
+  }
+}
+function initFiiCashChart() {
+  const chartContainers = document.getElementsByClassName('cf-graph');
+// Ensure that there's a second container available
+  if (chartContainers[0]) {
+  const container = chartContainers[0]; // Accessing the second container
+
+  // Create the chart inside the container
+  const chart = LightweightCharts.createChart(container, {
+    layout: {
+      textColor: 'black',
+      background: { type: 'solid', color: 'white' },
+    },
+    width: container.offsetWidth,
+    height: 100, // Adjusted height for smaller bars
+    rightPriceScale: {
+      visible: false,
+  },
+  });
+
+  // Add the histogram series with the specified color
+  const histogramSeries = chart.addHistogramSeries({
+    color: 'red', // Updated color
+    base: 0, // Baseline will still be 0 (negative values will go below this line)
+    priceScaleId: '',
+  });
+
+  // Set the data for the histogram series with only negative values
+  const data = [
+    { value: -5, time: 1642425322 }, // All negative values
+    { value: -10, time: 1642511722 },
+    { value: -8, time: 1642598122 },
+    { value: -12, time: 1642684522 },
+    { value: -6, time: 1642770922 },
+  ];
+
+  histogramSeries.setData(data);
+
+  // Adjust the time scale to fit the content and add spacing between bars
+  chart.applyOptions({
+    timeScale: {
+      barSpacing: 20, // Adjust this value to increase/decrease space between bars
+    },
+  });
+
+  // Fit the time scale to ensure the data is visible with the spacing
+  chart.timeScale().fitContent();
+  }
+  const chartElements = document.querySelectorAll('.tv-lightweight-charts');
+// Loop through each element and find the anchor tag within it
+chartElements.forEach((chartElement) => {
+    const anchorTag = chartElement.querySelector('a'); // Select the anchor tag inside the current chart element
+    if (anchorTag) {
+        anchorTag.style.display = 'none'; // Hide the anchor tag
+    }
+});
+
+}
+function bullishChart(){
+  var options = {
+    chart: {
+      type: 'donut',
+      height: 200
+    },
+    series: [13, 42, 45], // Percentage values
+    labels: ['Bullish', 'Bearish', 'Neutral'],
+    colors: ['#06c39b', '#ff4f6a', '#c9b4b3'], // Customize colors
+    plotOptions: {
+      pie: {
+        donut: {
+          size: '50%', // Adjust size of the donut
+        }
+      }
+    },
+    dataLabels: {
+      enabled: true,
+      style: {
+        fontSize: '16px',
+        fontFamily: 'Helvetica, Arial, sans-serif',
+      }
+    },
+    legend: {
+      show: false // Hide the legend (right-side description)
+    },
+    tooltip: {
+      y: {
+        formatter: function (val) {
+          return val + '%';
+        }
+      }
+    }
+  };
+  
+  var chart = new ApexCharts(document.querySelector(".circular-chart"), options);
+  chart.render();
+}
+setTimeout(() => {
+  initDiiCashChart();
+  initFiiCashChart();
+  bullishChart();
+}, 300);
+
+
