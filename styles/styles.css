@@ -20,7 +20,7 @@
   --heading-font-size-s: 24px;
   --heading-font-size-xs: 22px;
 
-  --nav-height: 190px;
+  --nav-height: 175px;
 }
 
 @font-face {
@@ -223,7 +223,7 @@ main img {
 }
 
 main > .section {
-  margin: 40px 0;
+  margin: 16px 0;
 }
 
 main > .section > div {
