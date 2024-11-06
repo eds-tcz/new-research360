@@ -316,10 +316,10 @@ async function stockanalysisdata() {
     document.querySelector('.sector-analysis-cards').innerHTML = html;
 
     loadExternalResources([
-      // {
-      //   type: 'script',
-      //   src: '../../scripts/libs/jquery 3.7.1.js',
-      // },
+      {
+        type: 'script',
+        src: '../../scripts/libs/jquery 3.7.1.js',
+      },
     ]).then(() => {
       loadExternalResources([
         {
