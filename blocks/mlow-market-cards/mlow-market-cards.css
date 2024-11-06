@@ -22,14 +22,14 @@
     overflow: hidden;
     padding: 12px !important;
     margin-bottom: 0 !important;
-    height: 294px;
+    /* height: 294px; */
 }
 
 .image-card-image {
     position: relative;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     border: 1px solid #d8d6cf;
     border-radius: 10px;
     overflow: hidden;
