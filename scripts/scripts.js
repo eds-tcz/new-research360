@@ -111,11 +111,11 @@ async function loadLazy(doc) {
 
   loadHeader(doc.querySelector('header'));
   loadFooter(doc.querySelector('footer'));
-  loadBlock(doc.querySelector('.nifty50-container'));
-  loadBlock(doc.querySelector('.market-sentiments-chart-container'));
-  loadBlock(doc.querySelector('.world-indices-container'));
-  loadBlock(doc.querySelector('.mlow-market-sentiments-container'));
-  loadBlock(doc.querySelector('.mlow-market-status-container'));
+  // loadBlock(doc.querySelector('.nifty50-container'));
+  // loadBlock(doc.querySelector('.market-sentiments-chart-container'));
+  // loadBlock(doc.querySelector('.world-indices-container'));
+  // loadBlock(doc.querySelector('.mlow-market-sentiments-container'));
+  // loadBlock(doc.querySelector('.mlow-market-status-container'));
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
@@ -128,7 +128,7 @@ async function loadLazy(doc) {
 function loadDelayed() {
   // eslint-disable-next-line import/no-cycle
   window.setTimeout(() => import('./delayed.js'), 3000);
-  window.setTimeout(() => import('./libs/jquery.js'), 3000);
+  // window.setTimeout(() => import('./libs/jquery.js'), 3000);
   // load anything that can be postponed to the latest here
 }
 
