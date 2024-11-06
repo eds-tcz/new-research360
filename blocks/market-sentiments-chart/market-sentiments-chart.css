@@ -3,6 +3,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     display: flex;
+    overflow: hidden;
 }
 
 .market-sentiments-div {
@@ -14,11 +15,30 @@
     margin-bottom: 0 !important;
 }
 
+.market-sentiments-chart-wrapper .owl-stage {
+display: flex;
+}
 .market-sentiments-chart-wrapper {
     max-width: 1366px !important;
     padding: 0 !important;
+    position: relative;
 }
 
+.market-sentiments-chart .owl-nav{
+    top: 28% !important;
+    background: 0 0;
+    color: inherit;
+    border: none;
+    padding: 0 !important;
+    font: inherit;
+}
+.market-sentiments-chart .owl-nav button{
+    background: 0 0;
+    color: inherit;
+    border: none;
+    padding: 0 !important;
+    font: inherit;
+}
 .market-sentiments-chart-container {
     padding-top: 5px;
 }
@@ -34,3 +54,5 @@
     font-size: 14px !important;
     line-height: 21px;
 }
+
+
