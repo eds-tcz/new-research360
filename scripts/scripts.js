@@ -5,6 +5,7 @@ import {
   decorateIcons,
   decorateSections,
   decorateTemplateAndTheme,
+  loadBlock,
   loadCSS,
   loadFooter,
   loadHeader,
@@ -110,6 +111,11 @@ async function loadLazy(doc) {
 
   loadHeader(doc.querySelector('header'));
   loadFooter(doc.querySelector('footer'));
+  loadBlock(doc.querySelector('.nifty50-container'));
+  loadBlock(doc.querySelector('.market-sentiments-chart-container'));
+  loadBlock(doc.querySelector('.world-indices-container'));
+  loadBlock(doc.querySelector('.mlow-market-sentiments-container'));
+  loadBlock(doc.querySelector('.mlow-market-status-container'));
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
