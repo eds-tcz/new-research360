@@ -63,7 +63,7 @@ function populateIndianIndices(marketData) {
       // eslint-disable-next-line no-undef
       $('.market-sentiments-chart').owlCarousel({
         loop: false,
-        margin: 15, 
+        margin: 15,
         slideBy: 6,
         // autoHeight: true,
         dots: false,

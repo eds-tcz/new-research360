@@ -63,5 +63,27 @@ function populateWorldIndices(marketData) {
     // Append the populated HTML to the container
     container.insertAdjacentHTML('beforeend', marketDiv);
   });
+    setTimeout(() => {
+      try {
+        // eslint-disable-next-line no-undef
+        $('.world-indices').owlCarousel({
+          loop: false,
+          margin: 15,
+          slideBy: 6,
+          // autoHeight: true,
+          dots: false,
+          nav: true,
+          // responsiveClass: true,
+          responsive: {
+            0: { items: 2 },
+            768: { items: 4 },
+            992: { items: 4 },
+            1200: { items: 6 },
+          },
+        });
+      } catch (error) {
+        console.log(error.message);
+      }
+    }, 2500);
 }
 getWorldIndices();
