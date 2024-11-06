@@ -156,7 +156,24 @@
   padding: 8px 0;
   font-size: 14px;
   border-bottom: 1px solid #d8d6cf !important;
-  text-align: center;
+  text-align: left;
+}
+
+.ms-content ol li:nth-child(1) strong {
+  color: #2db777;
+  font-size: 14px;
+}
+
+.ms-content ol li:nth-child(2) strong {
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.ms-content ol li:nth-child(3) strong {
+  color: #ff4f6a;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .ms-status {

@@ -36,11 +36,9 @@ export default function decorate(block) {
           circularChart.classList.add('circular-chart');
           circularChart.innerHTML = `
             <div class="chart-content">
-              <span>Bearish</span>
-              <span>45%</span>
             </div>
           `;
-          div.appendChild(circularChart);
+           div.appendChild(circularChart);
         }
         if (d === 3) {
           div.classList.add('ms-status');
@@ -75,6 +73,7 @@ export default function decorate(block) {
         }
         if (d === 1) {
           div.classList.add('cf-graph');
+          div.setAttribute('id', 'fiiCash');
         }
         if (d === 2) {
           div.classList.add('cf-heading-2');
@@ -91,6 +90,7 @@ export default function decorate(block) {
         }
         if (d === 3) {
           div.classList.add('cf-graph');
+          div.setAttribute('id', 'diiCash');
         }
         if (d === 4) {
           div.classList.add('cf-button');
@@ -99,143 +99,174 @@ export default function decorate(block) {
     }
   });
 }
-function initDiiCashChart() {
-  const chartContainers = document.getElementsByClassName('cf-graph');
-// Ensure that there's a second container available
-  if (chartContainers[1]) {
-  const container = chartContainers[1]; // Accessing the second container
-
-  // Create the chart inside the container
-  const chart = LightweightCharts.createChart(container, {
-    layout: {
-      textColor: 'black',
-      background: { type: 'solid', color: 'white' },
-    },
-    width: container.offsetWidth,
-    height: 100, // Adjusted height for smaller bars
-    rightPriceScale: {
-      visible: false,
-  },
-  });
-
-  // Add the histogram series with the specified color
-  const histogramSeries = chart.addHistogramSeries({
-    color: '#06c39b', // Updated color
-    base: 0, // Baseline will still be 0 (negative values will go below this line)
-    priceScaleId: '',
-  });
-
-  // Set the data for the histogram series with only negative values
-  const data = [
-    { value: 5, time: 1642425322 }, // All negative values
-    { value: 10, time: 1642511722 },
-    { value: 8, time: 1642598122 },
-    { value: 12, time: 1642684522 },
-    { value: 6, time: 1642770922 },
-  ];
-
-  histogramSeries.setData(data);
-
-  // Adjust the time scale to fit the content and add spacing between bars
-  chart.applyOptions({
-    timeScale: {
-      barSpacing: 20, // Adjust this value to increase/decrease space between bars
-    },
-  });
-
-  // Fit the time scale to ensure the data is visible with the spacing
-  chart.timeScale().fitContent();
-  }
-}
 function initFiiCashChart() {
-  const chartContainers = document.getElementsByClassName('cf-graph');
-// Ensure that there's a second container available
-  if (chartContainers[0]) {
-  const container = chartContainers[0]; // Accessing the second container
-
-  // Create the chart inside the container
-  const chart = LightweightCharts.createChart(container, {
-    layout: {
-      textColor: 'black',
-      background: { type: 'solid', color: 'white' },
+  var options = {
+    series: [{
+      data: [-21, -22, -10, -28, -16] // Negative values for 5 bars
+    }],
+    chart: {
+      height: 100, // Reduced chart height
+      type: 'bar',
+      events: {
+        click: function(chart, w, e) {
+          // console.log(chart, w, e)
+        }
+      },
+      toolbar: {
+        show: false // Disable the toolbar at the top
+      }
     },
-    width: container.offsetWidth,
-    height: 100, // Adjusted height for smaller bars
-    rightPriceScale: {
-      visible: false,
-  },
-  });
-
-  // Add the histogram series with the specified color
-  const histogramSeries = chart.addHistogramSeries({
-    color: 'red', // Updated color
-    base: 0, // Baseline will still be 0 (negative values will go below this line)
-    priceScaleId: '',
-  });
-
-  // Set the data for the histogram series with only negative values
-  const data = [
-    { value: -5, time: 1642425322 }, // All negative values
-    { value: -10, time: 1642511722 },
-    { value: -8, time: 1642598122 },
-    { value: -12, time: 1642684522 },
-    { value: -6, time: 1642770922 },
-  ];
-
-  histogramSeries.setData(data);
-
-  // Adjust the time scale to fit the content and add spacing between bars
-  chart.applyOptions({
-    timeScale: {
-      barSpacing: 20, // Adjust this value to increase/decrease space between bars
+    plotOptions: {
+      bar: {
+        columnWidth: '70%', // Increased column width for wider bars
+        distributed: true,
+        colors: {
+          ranges: [{
+            from: -Infinity,
+            to: 0,
+            color: '#ff4f6a' // Red color for negative values
+          }]
+        }
+      }
     },
-  });
-
-  // Fit the time scale to ensure the data is visible with the spacing
-  chart.timeScale().fitContent();
-  }
-  const chartElements = document.querySelectorAll('.tv-lightweight-charts');
-// Loop through each element and find the anchor tag within it
-chartElements.forEach((chartElement) => {
-    const anchorTag = chartElement.querySelector('a'); // Select the anchor tag inside the current chart element
-    if (anchorTag) {
-        anchorTag.style.display = 'none'; // Hide the anchor tag
+    dataLabels: {
+      enabled: false
+    },
+    legend: {
+      show: false
+    },
+    xaxis: {
+      categories: [
+        ['30', 'Oct'],
+      ['31', 'Oct'],
+      ['1', 'Nov'],
+      ['4', 'Nov']
+      ],
+      labels: {
+        show: false // Hide the horizontal category labels
+      }
+    },
+    yaxis: {
+      show: false // Hide the left vertical values (y-axis labels)
     }
-});
-
+  };
+  
+  var chart = new ApexCharts(document.querySelector("#fiiCash"), options);
+  chart.render();
+  
 }
-function bullishChart(){
+function initDiiCashChart() {
+  var options = {
+    series: [{
+      data: [21, 22, 10, 28, 16], // Values for 5 bars
+    }],
+    chart: {
+      height: 100, // Reduced chart height
+      type: 'bar',
+      events: {
+        click: function(chart, w, e) {
+          // console.log(chart, w, e)
+        }
+      },
+      toolbar: {
+        show: false // Disable the toolbar at the top
+      }
+    },
+    plotOptions: {
+      bar: {
+        columnWidth: '70%', // Adjust column width for wider bars
+        distributed: true
+      }
+    },
+    colors: ['#06c39b'], // Green color for all bars
+    dataLabels: {
+      enabled: false
+    },
+    legend: {
+      show: false
+    },
+    xaxis: {
+      categories: [
+        ['30', 'Oct'],
+        ['31', 'Oct'],
+        ['1', 'Nov'],
+        ['4', 'Nov']
+      ],
+      labels: {
+        show: false // Hide the horizontal category labels
+      }
+    },
+    yaxis: {
+      show: false // Hide the left vertical values (y-axis labels)
+    }
+  };
+
+  var chart = new ApexCharts(document.querySelector("#diiCash"), options);
+  chart.render();
+}
+function bullishChart() {
   var options = {
     chart: {
       type: 'donut',
-      height: 200
+      height: 200,
     },
-    series: [13, 42, 45], // Percentage values
+    series: [13, 45, 42], // Values for each category
     labels: ['Bullish', 'Bearish', 'Neutral'],
     colors: ['#06c39b', '#ff4f6a', '#c9b4b3'], // Customize colors
     plotOptions: {
       pie: {
         donut: {
           size: '50%', // Adjust size of the donut
+          labels: {
+            show: true,
+            name: {
+              show: true,
+              offsetY: -10,
+              formatter: function() {
+                return 'Neutral';
+              },
+              style: {
+                fontSize: '16px',
+                color: '#333',
+                fontFamily: 'Helvetica, Arial, sans-serif'
+              }
+            },
+            value: {
+              show: true,
+              offsetY: 10,
+              formatter: function() {
+                return '42%'; // Static value to display permanently
+              },
+              style: {
+                fontSize: '20px',
+                color: '#333',
+                fontFamily: 'Helvetica, Arial, sans-serif'
+              }
+            },
+            total: {
+              show: true,
+              label: 'Neutral',
+              formatter: function() {
+                return '42%';
+              },
+              style: {
+                fontSize: '20px',
+                color: '#333',
+                fontFamily: 'Helvetica, Arial, sans-serif'
+              }
+            }
+          }
         }
       }
     },
     dataLabels: {
-      enabled: true,
-      style: {
-        fontSize: '16px',
-        fontFamily: 'Helvetica, Arial, sans-serif',
-      }
+      enabled: false // Disable data labels to hide percentage around the chart
     },
     legend: {
-      show: false // Hide the legend (right-side description)
+      show: false // Hide the legend
     },
     tooltip: {
-      y: {
-        formatter: function (val) {
-          return val + '%';
-        }
-      }
+      enabled: false // Disable tooltip on hover
     }
   };
   

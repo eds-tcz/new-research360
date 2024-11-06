@@ -101,7 +101,7 @@ function populateMarketGainers(gainersData) {
     const row = `
       <tr>
         <td>${data.compname}</td>
-        <td><img src="../../images/mlow-market-nav-1/gainerFirst.png" alt="Graph" /></td>
+        <td><img src="../../images/mlow-market-nav-1/gainerFirst.png" alt="Graph" class="gainerImage"/></td>
         <td>${formattedPrice}</td>
         <td style='color: ${data.per_change > 0 ? 'green' : 'red'};'>${formattedPerChange}</td>
       </tr>

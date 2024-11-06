@@ -25,7 +25,7 @@
 }
 
 .market-sentiments-chart .owl-nav {
-  top: 34% !important;
+  top: 28% !important;
   background: 0 0;
   color: inherit;
   border: none;
@@ -43,14 +43,22 @@
   padding-top: 5px;
 }
 
-.market-sentiment-text-1 {
+.market-sentiment-text-2 {
   font-weight: 500;
-  font-size: 20px;
+  font-size: 16px;
   margin-bottom: -10px;
 }
 
-.market-sentiment-text-2 {
+.market-sentiment-text-1 {
   color: #999;
   font-size: 14px !important;
-  line-height: 21px;
+  line-height: 0px;
+  margin-bottom: -8px;
+}
+
+.market-sentiments-chart-container  .owl-nav button.owl-prev.disabled {
+  visibility: hidden;
+}
+.market-sentiments-chart-container  .owl-nav button.owl-next.disabled {
+  visibility: hidden;
 }
