@@ -160,6 +160,7 @@
   font-size: 14px;
   color: #000 !important;
   padding-top: 15px;
+  padding-bottom: 0.5em;
 }
 
 .ace-investors .market-card-table tr:nth-child(n + 2):hover {
@@ -253,7 +254,7 @@
   position: absolute;
   display: flex;
   justify-content: center;
-  bottom: 0;
+  bottom: 1px;
 }
 
 .ace-investors .market-card-button p > a {
