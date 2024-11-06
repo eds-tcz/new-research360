@@ -99,3 +99,188 @@ export default function decorate(block) {
     }
   });
 }
+function initDiiCashChart() {
+  const chartContainers = document.getElementsByClassName('cf-graph');
+// Ensure that there's a second container available
+  if (chartContainers[1]) {
+  const container = chartContainers[1]; // Accessing the second container
+
+  // Create the chart inside the container
+  const chart = LightweightCharts.createChart(container, {
+    layout: {
+      textColor: 'black',
+      background: { type: 'solid', color: 'white' },
+    },
+    width: container.offsetWidth,
+    height: 100, // Adjusted height for smaller bars
+    rightPriceScale: {
+      visible: false,
+  },
+  });
+
+  // Add the histogram series with the specified color
+  const histogramSeries = chart.addHistogramSeries({
+    color: '#06c39b', // Updated color
+    base: 0, // Baseline will still be 0 (negative values will go below this line)
+    priceScaleId: '',
+  });
+
+  // Set the data for the histogram series with only negative values
+  const data = [
+    { value: 5, time: 1642425322 }, // All negative values
+    { value: 10, time: 1642511722 },
+    { value: 8, time: 1642598122 },
+    { value: 12, time: 1642684522 },
+    { value: 6, time: 1642770922 },
+  ];
+
+  histogramSeries.setData(data);
+
+  // Adjust the time scale to fit the content and add spacing between bars
+  chart.applyOptions({
+    timeScale: {
+      barSpacing: 20, // Adjust this value to increase/decrease space between bars
+    },
+  });
+
+  // Fit the time scale to ensure the data is visible with the spacing
+  chart.timeScale().fitContent();
+  }
+}
+function initFiiCashChart() {
+  const chartContainers = document.getElementsByClassName('cf-graph');
+// Ensure that there's a second container available
+  if (chartContainers[0]) {
+  const container = chartContainers[0]; // Accessing the second container
+
+  // Create the chart inside the container
+  const chart = LightweightCharts.createChart(container, {
+    layout: {
+      textColor: 'black',
+      background: { type: 'solid', color: 'white' },
+    },
+    width: container.offsetWidth,
+    height: 100, // Adjusted height for smaller bars
+    rightPriceScale: {
+      visible: false,
+  },
+  });
+
+  // Add the histogram series with the specified color
+  const histogramSeries = chart.addHistogramSeries({
+    color: 'red', // Updated color
+    base: 0, // Baseline will still be 0 (negative values will go below this line)
+    priceScaleId: '',
+  });
+
+  // Set the data for the histogram series with only negative values
+  const data = [
+    { value: -5, time: 1642425322 }, // All negative values
+    { value: -10, time: 1642511722 },
+    { value: -8, time: 1642598122 },
+    { value: -12, time: 1642684522 },
+    { value: -6, time: 1642770922 },
+  ];
+
+  histogramSeries.setData(data);
+
+  // Adjust the time scale to fit the content and add spacing between bars
+  chart.applyOptions({
+    timeScale: {
+      barSpacing: 20, // Adjust this value to increase/decrease space between bars
+    },
+  });
+
+  // Fit the time scale to ensure the data is visible with the spacing
+  chart.timeScale().fitContent();
+  }
+  const chartElements = document.querySelectorAll('.tv-lightweight-charts');
+// Loop through each element and find the anchor tag within it
+chartElements.forEach((chartElement) => {
+    const anchorTag = chartElement.querySelector('a'); // Select the anchor tag inside the current chart element
+    if (anchorTag) {
+        anchorTag.style.display = 'none'; // Hide the anchor tag
+    }
+});
+
+}
+function bullishChart(){
+  var options = {
+    chart: {
+      type: 'donut',
+      height: 200
+    },
+    series: [13, 42, 45], // Percentage values
+    labels: ['Bullish', 'Bearish', 'Neutral'],
+    colors: ['#06c39b', '#ff4f6a', '#c9b4b3'], // Customize colors
+    plotOptions: {
+      pie: {
+        donut: {
+          size: '50%', // Adjust size of the donut
+        }
+      }
+    },
+    dataLabels: {
+      enabled: true,
+      style: {
+        fontSize: '16px',
+        fontFamily: 'Helvetica, Arial, sans-serif',
+      }
+    },
+    legend: {
+      show: false // Hide the legend (right-side description)
+    },
+    tooltip: {
+      y: {
+        formatter: function (val) {
+          return val + '%';
+        }
+      }
+    }
+  };
+  
+  var chart = new ApexCharts(document.querySelector(".circular-chart"), options);
+  chart.render();
+}
+function generateProgressBarHTML(leftValue, centerValue, progressLeft, progressRight) {
+  return `
+      <div class="progressbar">
+          <div style="display: flex; justify-content: center; align-items: center;">
+              <div style="color: #06c39b; font-family: 'Roboto'; font-size: 16px; margin-right: 8px;">${leftValue}</div>
+              <div style="color: #ff4f6a; font-family: 'Roboto'; font-size: 14px; padding-left: 4px; padding-right: 4px;">${centerValue}</div>
+          </div>
+          <div class="progress sector-change" style="margin-top: 2px;">
+              <div role="progressbar" style="width: ${progressLeft}%; background: #06c39b;" aria-valuenow="${progressLeft}" aria-valuemin="0" aria-valuemax="100"></div>
+              <div role="progressbar" style="width: ${progressRight}%; background: #ff4f6a;" aria-valuenow="${progressRight}" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+      </div>
+  `;
+}
+const progressBarHTML = generateProgressBarHTML(86, 13, 80, 20);
+// Append this HTML to a specific cell in your table
+function appendProgressBars() {
+  const adRows = document.querySelectorAll('.ad-tab .ad-row:not(:first-child)');
+  
+  adRows.forEach((row, index) => {
+      const leftValue = Math.floor(Math.random() * 100); // Replace with your logic
+      const centerValue = Math.floor(Math.random() * 100); // Replace with your logic
+      const progressLeft = Math.floor(Math.random() * 100); // Replace with your logic
+      const progressRight = 100 - progressLeft; // Completes the bar to 100%
+
+      // Generate the HTML for each row
+      const progressBarHTML = generateProgressBarHTML(leftValue, centerValue, progressLeft, progressRight);
+      
+      const thirdCell = row.querySelectorAll('.ad-cell')[2];
+      if (thirdCell) {
+          thirdCell.innerHTML = progressBarHTML;
+      }
+  });
+}
+setTimeout(() => {
+  initDiiCashChart();
+  initFiiCashChart();
+  bullishChart();
+  appendProgressBars();
+}, 300);
+
+

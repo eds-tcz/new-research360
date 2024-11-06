@@ -1,0 +1,167 @@
+.mlow-latest-in-news-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1366px !important;
+  padding: 0 !important;
+  margin: auto !important;
+}
+
+.mlow-latest-in-news {
+  border: 1px solid #dee2e6;
+  padding: 16px;
+  border-radius: 0.375rem;
+}
+
+.mlow-latest-in-news-wrapper {
+  width: 70% !important;
+  padding: 0 !important;
+}
+
+.mlow-news-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #d8d6cf !important;
+  margin-bottom: 8px;
+}
+
+.news-heading h2 {
+  margin: 0 !important;
+  font-weight: 500 !important;
+  font-size: 22px;
+}
+
+.news-view-more p {
+  margin: 0 !important;
+}
+
+.news-view-more a {
+  margin: 0 !important;
+  font-size: 16px !important;
+  color: #000 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  background-color: #fff !important;
+  padding: 2px !important;
+  border: none !important;
+}
+
+.mlow-news-filter ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.mlow-news-filter li {
+  padding: 1px 15px;
+  border: 1px solid #d1d1d1;
+  border-radius: 24px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.mlow-news-filter li:first-child {
+  background-color: #fcaf17;
+  font-weight: 500;
+}
+
+.mlow-news-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.content-info {
+  width: 50%;
+}
+
+.content-info h2 {
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  font-size: 24px;
+}
+
+.content-para {
+  font-size: 14px;
+  margin: 0 !important;
+}
+
+.content-date {
+  color: #666;
+  font-size: 12px;
+}
+
+.content-image {
+  width: 50%;
+}
+
+.mlow-news-marquee {
+  display: flex;
+  justify-content: space-between;
+}
+
+.marquee-text {
+  width: 100%;
+  font-size: 14px;
+}
+
+.marquee-button p {
+  margin: auto 0 !important;
+}
+
+.marquee-button a {
+  margin: 0 !important;
+  font-size: 12px !important;
+  color: #000 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  background-color: #fff !important;
+  padding: 2px !important;
+  border: none !important;
+}
+
+.mlow-news-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-sec {
+  border-right: 1px solid #d8d6cf !important;
+  padding: 0 8px;
+}
+
+.footer-sec:last-child {
+  border-right: 0 !important;
+}
+
+.footer-sec h3 {
+  font-size: 14px;
+}
+
+.footer-sec p {
+  font-size: 12px;
+  color: #666;
+}
+
+.footer-sec table {
+  width: 100%;
+  box-sizing: border-box;
+}
+.footer-sec table td:first-child {
+  font-size: 14px;
+  color: #000;
+  font-weight: 500;
+  text-align: left;
+}
+
+.footer-sec table td:last-child {
+  font-size: 14px;
+  color: #ff4f6a;
+  text-align: left;
+}
