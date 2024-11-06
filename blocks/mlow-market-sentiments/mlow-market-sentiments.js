@@ -36,11 +36,9 @@ export default function decorate(block) {
           circularChart.classList.add('circular-chart');
           circularChart.innerHTML = `
             <div class="chart-content">
-              <span>Bearish</span>
-              <span>45%</span>
             </div>
           `;
-          div.appendChild(circularChart);
+           div.appendChild(circularChart);
         }
         if (d === 3) {
           div.classList.add('ms-status');
@@ -204,38 +202,69 @@ chartElements.forEach((chartElement) => {
 });
 
 }
-function bullishChart(){
+function bullishChart() {
   var options = {
     chart: {
       type: 'donut',
-      height: 200
+      height: 200,
     },
-    series: [13, 42, 45], // Percentage values
+    series: [13, 45, 42], // Values for each category
     labels: ['Bullish', 'Bearish', 'Neutral'],
     colors: ['#06c39b', '#ff4f6a', '#c9b4b3'], // Customize colors
     plotOptions: {
       pie: {
         donut: {
           size: '50%', // Adjust size of the donut
+          labels: {
+            show: true,
+            name: {
+              show: true,
+              offsetY: -10,
+              formatter: function() {
+                return 'Neutral';
+              },
+              style: {
+                fontSize: '16px',
+                color: '#333',
+                fontFamily: 'Helvetica, Arial, sans-serif'
+              }
+            },
+            value: {
+              show: true,
+              offsetY: 10,
+              formatter: function() {
+                return '42%'; // Static value to display permanently
+              },
+              style: {
+                fontSize: '20px',
+                color: '#333',
+                fontFamily: 'Helvetica, Arial, sans-serif'
+              }
+            },
+            total: {
+              show: true,
+              label: 'Neutral',
+              formatter: function() {
+                return '42%';
+              },
+              style: {
+                fontSize: '20px',
+                color: '#333',
+                fontFamily: 'Helvetica, Arial, sans-serif'
+              }
+            }
+          }
         }
       }
     },
     dataLabels: {
-      enabled: true,
-      style: {
-        fontSize: '16px',
-        fontFamily: 'Helvetica, Arial, sans-serif',
-      }
+      enabled: false // Disable data labels to hide percentage around the chart
     },
     legend: {
-      show: false // Hide the legend (right-side description)
+      show: false // Hide the legend
     },
     tooltip: {
-      y: {
-        formatter: function (val) {
-          return val + '%';
-        }
-      }
+      enabled: false // Disable tooltip on hover
     }
   };
   
