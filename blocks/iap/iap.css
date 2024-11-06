@@ -44,7 +44,7 @@
 }
 .iap-card-title table td:nth-child(3) {
   line-height: 0;
-  padding-left: 21px;
+  padding-left: 10px;
   color: #666;
   opacity: unset !important;
   margin-bottom: 0;
@@ -76,6 +76,11 @@ pre {
   border-bottom: 1px solid #ddd;
   padding-bottom: 0px;
 }
+.iap-card-title code {
+  font-size: 14px !important;
+  font-family: Roboto;
+}
+
 .iap-card-button {
   background: #06c39b;
   min-width: 150px;
@@ -130,6 +135,6 @@ pre {
   color: black;
 }
 .iap-card-data table tbody tr td picture img {
-  width: 20px;
-  height: 20px;
+    width: 20px;
+    height: 18px;
 }

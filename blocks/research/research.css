@@ -138,6 +138,13 @@ pre {
 .research-card-button > p {
   padding-top: 10px !important;
 }
+
+.research-card-button img {
+  width: auto;
+  height: 16px;
+  margin-left: -5px;
+}
+
 .research-card-button table {
   width: 100%;
 }

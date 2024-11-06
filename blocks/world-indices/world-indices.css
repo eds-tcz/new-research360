@@ -10,7 +10,7 @@
   border: 1px solid #ddd !important;
   border-radius: 0.5rem;
   overflow: hidden;
-  padding: 12px !important;
+  padding: 12px 12px 4px 12px !important;
   margin-bottom: 0 !important;
 }
 
@@ -23,12 +23,11 @@
   padding-top: 15px;
 }
 
-
 .world-indices-text-2 {
   font-weight: 500;
   font-size: 16px;
   margin-bottom: -10px;
-      margin-top: 25px;
+  margin-top: 0px;
 }
 
 .world-indices-text-1 {
@@ -42,6 +41,19 @@
   color: #999;
   font-size: 14px !important;
   line-height: 21px;
+  margin-top: 0px;
+}
+.world-indices-image img {
+  margin-top: -15px;
+  width: 24px !important;
+  height: 24px !important;
+  padding: 2px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .world-indices-wrapper {
   position: relative;
@@ -49,6 +61,10 @@
 .world-indices {
   overflow: hidden;
   display: flex;
+}
+.world-indices-text-3 {
+  font-weight: 400;
+  font-size: 14px;
 }
 .world-indices .owl-stage {
   display: flex;
