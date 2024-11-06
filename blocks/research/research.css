@@ -26,6 +26,10 @@
   font-size: 16px;
   font-weight: 700;
 }
+
+.research-card-image code{
+  font-family: Roboto;
+}
 .research-image-card {
   border: 1px solid #ddd;
   width: 35%;
