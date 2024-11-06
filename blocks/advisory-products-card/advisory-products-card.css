@@ -136,6 +136,10 @@
     line-height: 1;
 }
 
+.advisory-div3 code{
+    font-family: "Roboto", sans-serif !important;
+}
+
 .adisory-div4 {
     display: flex;
     flex-direction: column;
