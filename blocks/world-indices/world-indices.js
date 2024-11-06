@@ -39,9 +39,23 @@ function getWorldIndices() {
     });
 }
 function populateWorldIndices(marketData) {
+  let countryImages = [
+    "https://www.research360.in/dist/images/ind_India.png",
+    "https://www.research360.in/dist/images/us_United%20States.svg",
+    "https://www.research360.in/dist/images/us_United%20States.svg",
+    "https://www.research360.in/dist/images/gb_United%20Kingdom.svg",
+    "https://www.research360.in/dist/images/us_United%20States.svg",
+    "https://www.research360.in/dist/images/de_Germany.svg",
+    "https://www.research360.in/dist/images/de_Germany.svg",
+    "https://www.research360.in/dist/images/hk_Hong%20Kong.svg",
+    "https://www.research360.in/dist/images/us_United%20States.svg",
+    "https://www.research360.in/dist/images/ch_Switzerland.svg",
+    "https://www.research360.in/dist/images/ch_Switzerland.svg"
+  ]
   const container = document.querySelector('.world-indices');
   container.innerHTML = ''; // Clear any existing content
-  marketData.forEach((data) => {
+  marketData.forEach((data, index) => {
+    const image = countryImages[index];
     const perChangeSign = data.change_per > 0 ? '+' : '-';
     const formattedDataChange = Math.abs(parseFloat(data.chnge).toFixed(2));
     const formattedPerChange = Math.abs(parseFloat(data.change_per).toFixed(2));
@@ -49,7 +63,10 @@ function populateWorldIndices(marketData) {
     const marketDiv = `
       <div class='world-indices-div'>
         <div class='world-indices-1'>
-          <p class='world-indices-text-1'>${data.index_name}</p>
+        <div style="display:flex;justify-content: space-between">
+        <p class='world-indices-text-1'>${data.index_name}</p>
+        <p class='world-indices-image'><img src="${image}" alt="Country Flag" style="width: 40px; height: 25px; margin-right: 10px;" /></p>
+        </div>
           <p class='world-indices-text-2'>${data.last}</p>
           <p class='world-indices-text-3' style='color: ${
             data.change_per > 0 ? 'green' : 'red'
