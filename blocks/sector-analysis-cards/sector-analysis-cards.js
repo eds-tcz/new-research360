@@ -318,7 +318,7 @@ async function stockanalysisdata() {
     loadExternalResources([
       {
         type: 'script',
-        src: '../../scripts/libs/jquery.js',
+        src: 'https://code.jquery.com/jquery-3.7.1.min.js',
       },
     ]).then(() => {
       loadExternalResources([
