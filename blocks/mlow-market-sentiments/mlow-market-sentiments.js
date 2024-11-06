@@ -242,10 +242,45 @@ function bullishChart(){
   var chart = new ApexCharts(document.querySelector(".circular-chart"), options);
   chart.render();
 }
+function generateProgressBarHTML(leftValue, centerValue, progressLeft, progressRight) {
+  return `
+      <div class="progressbar">
+          <div style="display: flex; justify-content: center; align-items: center;">
+              <div style="color: #06c39b; font-family: 'Roboto'; font-size: 16px; margin-right: 8px;">${leftValue}</div>
+              <div style="color: #ff4f6a; font-family: 'Roboto'; font-size: 14px; padding-left: 4px; padding-right: 4px;">${centerValue}</div>
+          </div>
+          <div class="progress sector-change" style="margin-top: 2px;">
+              <div role="progressbar" style="width: ${progressLeft}%; background: #06c39b;" aria-valuenow="${progressLeft}" aria-valuemin="0" aria-valuemax="100"></div>
+              <div role="progressbar" style="width: ${progressRight}%; background: #ff4f6a;" aria-valuenow="${progressRight}" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+      </div>
+  `;
+}
+const progressBarHTML = generateProgressBarHTML(86, 13, 80, 20);
+// Append this HTML to a specific cell in your table
+function appendProgressBars() {
+  const adRows = document.querySelectorAll('.ad-tab .ad-row:not(:first-child)');
+  
+  adRows.forEach((row, index) => {
+      const leftValue = Math.floor(Math.random() * 100); // Replace with your logic
+      const centerValue = Math.floor(Math.random() * 100); // Replace with your logic
+      const progressLeft = Math.floor(Math.random() * 100); // Replace with your logic
+      const progressRight = 100 - progressLeft; // Completes the bar to 100%
+
+      // Generate the HTML for each row
+      const progressBarHTML = generateProgressBarHTML(leftValue, centerValue, progressLeft, progressRight);
+      
+      const thirdCell = row.querySelectorAll('.ad-cell')[2];
+      if (thirdCell) {
+          thirdCell.innerHTML = progressBarHTML;
+      }
+  });
+}
 setTimeout(() => {
   initDiiCashChart();
   initFiiCashChart();
   bullishChart();
+  appendProgressBars();
 }, 300);
 
 
