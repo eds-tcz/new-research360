@@ -76,6 +76,11 @@ pre {
   border-bottom: 1px solid #ddd;
   padding-bottom: 0px;
 }
+.iap-card-title code {
+  font-size: 14px !important;
+  font-family: Roboto;
+}
+
 .iap-card-button {
   background: #06c39b;
   min-width: 150px;
