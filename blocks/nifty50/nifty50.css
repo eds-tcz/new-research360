@@ -20,7 +20,7 @@
 }
 
 .grey-card {
-  background: linear-gradient(90deg, #eee, #f9f9f9, #eee);
+  background: linear-gradient(90deg, #e0e0e0, #f0f0f0, #e0e0e0);
 }
 
 .grey-card > * {
