@@ -49,6 +49,8 @@ export default function decorate(block) {
       }
     });
   });
+}
+function niftyChart(){
   const chartContainers = document.querySelectorAll('.graph-area');
   // Loop through each container and create a chart in it
   chartContainers.forEach((container) => {
@@ -215,7 +217,6 @@ export default function decorate(block) {
     { time: '2019-05-28', value: 26.23 },
    ];
   lineSeries.setData(data);
-
    });
 }
 function getNifty50Data(indexCode) {
@@ -246,5 +247,7 @@ function getNifty50Data(indexCode) {
   //   console.error('API Call Failed:', error);
   // });
 }
-
+setTimeout(() => {
+  niftyChart();
+}, 2000);
 getNifty50Data('20559');

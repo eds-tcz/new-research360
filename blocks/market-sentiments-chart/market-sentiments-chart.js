@@ -56,7 +56,7 @@ function populateIndianIndices(marketData) {
     // Append the populated HTML to the container
     container.insertAdjacentHTML('beforeend', marketDiv);
   });
-  initCharts();
+  
 
   setTimeout(() => {
     try {
@@ -76,6 +76,7 @@ function populateIndianIndices(marketData) {
           1200: { items: 6 },
         },
       });
+      initCharts();
     } catch (error) {
       console.log(error.message);
     }
