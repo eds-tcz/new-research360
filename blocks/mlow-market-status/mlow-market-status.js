@@ -96,6 +96,8 @@ function populateMarketGainers(gainersData) {
     // Append the row to the table body
     tableBody.insertAdjacentHTML('beforeend', row);
   });
+  initGainerImageCharts();
+  initLooserImageCharts();
 };
 function initGainerImageCharts() {
   // Select all the images with the class 'gainerImage'
@@ -269,7 +271,7 @@ function initLooserImageCharts() {
   });
 } 
 setTimeout(() => {
-  initGainerImageCharts();
-  initLooserImageCharts();
   getMarketGainers('1H');
-}, 2500);
+}, 2000);
+
+
