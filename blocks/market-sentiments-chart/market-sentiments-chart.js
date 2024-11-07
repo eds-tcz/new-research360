@@ -58,7 +58,7 @@ function populateIndianIndices(marketData) {
   });
   
 
-  setTimeout(() => {
+setTimeout(() => {
     try {
       // eslint-disable-next-line no-undef
       $('.market-sentiments-chart').owlCarousel({
@@ -80,7 +80,7 @@ function populateIndianIndices(marketData) {
     } catch (error) {
       console.log(error.message);
     }
-  }, 2500);
+}, 2500);
 }
 function initCharts() {
   const chartContainersIndian = document.querySelectorAll(

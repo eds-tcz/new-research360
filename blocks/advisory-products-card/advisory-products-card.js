@@ -24,6 +24,8 @@ export default function decorate(block) {
       }
     });
   });
+}
+function headingBold(){
   document.querySelectorAll('.advisory-products-card td').forEach((td) => {
     if (td.textContent.trim() === 'Open') {
       td.classList.add('open-state');
@@ -90,3 +92,6 @@ export default function decorate(block) {
     });
   }
 }
+setTimeout(() => {
+  headingBold();
+}, 1000);
