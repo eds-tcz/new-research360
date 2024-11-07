@@ -88,8 +88,8 @@
 }
 .world-indices-div.grey-card {
   background: linear-gradient(90deg, #e0e0e0, #f0f0f0, #e0e0e0);
-  width: 200px;
-  height: 120px;
+  width: 150px !important;
+  height: 120px !important;
 }
 
 .grey-card > * {
