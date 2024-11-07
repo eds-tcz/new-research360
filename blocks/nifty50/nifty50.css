@@ -19,6 +19,14 @@
   /* height: fit-content; */
 }
 
+.grey-card {
+  background: linear-gradient(90deg, #eee, #f9f9f9, #eee);
+}
+
+.grey-card > * {
+  opacity: 0;
+}
+
 .nifty50 {
   width: 100%;
   justify-content: space-between;
@@ -81,7 +89,7 @@
 
 .graph-area {
   height: 92px;
-  
+
   position: relative;
   border-radius: 8px;
 }
