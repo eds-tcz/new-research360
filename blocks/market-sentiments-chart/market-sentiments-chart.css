@@ -62,3 +62,10 @@
 .market-sentiments-chart-container  .owl-nav button.owl-next.disabled {
   visibility: hidden;
 }
+.grey-card {
+  background: linear-gradient(90deg, #e0e0e0, #f0f0f0, #e0e0e0);
+}
+
+.grey-card > * {
+  opacity: 0;
+}

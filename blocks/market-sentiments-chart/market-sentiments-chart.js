@@ -1,6 +1,7 @@
 export default function decorate(block) {
   [...block.children].forEach((row) => {
     row.classList.add('market-sentiments-div');
+    row.classList.add('grey-card'); 
     [...row.children].forEach((div, index) => {
       div.classList.add(`market-sentiments-${index + 1}`);
       const paragraphs = div.querySelectorAll('p');
@@ -24,6 +25,7 @@ function getIndianIndices() {
       console.log('API Call Successful:', data);
       let marketData = data?.data;
       populateIndianIndices(marketData);
+      document.querySelectorAll('.market-sentiments-div.grey-card').forEach(card => card.classList.remove('grey-card'));
     })
     .catch((error) => {
       console.error('API Call Failed:', error);
@@ -149,4 +151,6 @@ function initCharts() {
     }
   });
 }
-getIndianIndices();
+setTimeout(() => {
+  getIndianIndices();
+}, 1500);
