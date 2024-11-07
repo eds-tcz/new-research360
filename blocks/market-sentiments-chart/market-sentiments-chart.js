@@ -86,7 +86,7 @@ setTimeout(() => {
     } catch (error) {
       console.log(error.message);
     }
-}, 2500);
+}, );
 }
 function initCharts() {
   const chartContainersIndian = document.querySelectorAll(

@@ -103,7 +103,7 @@ function populateWorldIndices(marketData) {
       } catch (error) {
         console.log(error.message);
       }
-    }, 2500);
+    },);
 }
 setTimeout(() => {
     getWorldIndices();

@@ -86,8 +86,10 @@
 .world-indices-container .owl-nav button.owl-next.disabled {
   visibility: hidden;
 }
-.grey-card {
+.world-indices-div.grey-card {
   background: linear-gradient(90deg, #e0e0e0, #f0f0f0, #e0e0e0);
+  width: 215.167px;
+  height: 120px;
 }
 
 .grey-card > * {

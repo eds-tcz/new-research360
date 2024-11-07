@@ -12,7 +12,7 @@
   border-radius: 0.5rem;
   overflow: hidden;
   padding: 12px !important;
-  margin-bottom: 0 !important;
+  margin-bottom: 5px !important;
 }
 
 .market-sentiments-chart-wrapper .owl-stage {
