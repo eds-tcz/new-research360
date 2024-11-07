@@ -1,6 +1,7 @@
 export default function decorate(block) {
   [...block.children].forEach((row, r) => {
     row.classList.add('world-indices-div');
+    row.classList.add('grey-card'); 
     [...row.children].forEach((div, index) => {
       div.classList.add(`world-indices-${index + 1}`);
       const paragraphs = div.querySelectorAll('p');
@@ -77,6 +78,7 @@ function populateWorldIndices(marketData) {
         </div>
       </div>
     `;
+    document.querySelectorAll('.world-indices-div.grey-card').forEach(card => card.classList.remove('grey-card'));
     // Append the populated HTML to the container
     container.insertAdjacentHTML('beforeend', marketDiv);
   });
@@ -103,4 +105,7 @@ function populateWorldIndices(marketData) {
       }
     }, 2500);
 }
-getWorldIndices();
+setTimeout(() => {
+    getWorldIndices();
+}, 2000); // Delay the API call by 3 seconds
+

@@ -294,3 +294,7 @@
 .advisory-div3 table {
   width: 100%;
 }
+.open-state {
+  background-color: #E0EEE0 !important;
+  color: #009B00 !important;
+}

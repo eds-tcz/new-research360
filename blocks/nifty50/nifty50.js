@@ -1,6 +1,7 @@
 export default function decorate(block) {
   [...block.children].forEach((row) => {
     row.classList.add('nifty-cards');
+    row.classList.add('grey-card');
     [...row.children].forEach((div, index) => {
       div.classList.add(`nifty-cards-${index + 1}`);
       const paragraphs = div.querySelectorAll('p');
@@ -49,6 +50,8 @@ export default function decorate(block) {
       }
     });
   });
+}
+function niftyChart(){
   const chartContainers = document.querySelectorAll('.graph-area');
   // Loop through each container and create a chart in it
   chartContainers.forEach((container) => {
@@ -215,7 +218,6 @@ export default function decorate(block) {
     { time: '2019-05-28', value: 26.23 },
    ];
   lineSeries.setData(data);
-
    });
 }
 function getNifty50Data(indexCode) {
@@ -241,10 +243,14 @@ function getNifty50Data(indexCode) {
       ).innerText = `${indexData.ltp}`;
       const additionalInfo = document.createElement('p');
       nifty50Card.appendChild(additionalInfo);
+      niftyChart();
+      document.querySelectorAll('.nifty-cards.grey-card').forEach(card => card.classList.remove('grey-card'));
     });
   // .catch((error) => {
   //   console.error('API Call Failed:', error);
   // });
 }
+setTimeout(() => {
+  getNifty50Data('20559');
+}, 2000);
 
-getNifty50Data('20559');

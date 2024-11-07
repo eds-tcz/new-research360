@@ -1,4 +1,3 @@
-let isListenerAdded = false;
 export default function decorate(block) {
   [...block.children].forEach((row) => {
     row.classList.add('mlow-market-head');
@@ -27,30 +26,6 @@ export default function decorate(block) {
       }
     });
   });
-  // Select the parent element that contains the list items
-  if(!isListenerAdded){
-    document.querySelector('.mlow-market-head .market-card-filter').addEventListener('click', function(e) {
-      // Check if the clicked element is an <li>
-      if (e.target.closest('li')) {
-          e.preventDefault(); // Prevent the default action
-          // Get the anchor tag within the clicked <li>
-          const anchorText = e.target.closest('li').querySelector('a').textContent;
-          console.log(anchorText); // Log the anchor text
-          getMarketGainers(anchorText);
-          const listItems = this.querySelectorAll('li');
-          listItems.forEach((item) => {
-            item.style.backgroundColor = ''; // Reset background color
-            item.style.fontWeight = '';
-          });
-          // Add background color to the clicked <li>
-          e.target.closest('li').style.backgroundColor = '#fcaf17';
-          e.target.closest('li').style.fontWeight = 'bold';
-          isListenerAdded = true;
-      }
-    });
-    isListenerAdded = true;
-    
-  }
 }
 function getMarketGainers(period) {
   const url = 'https://research360api.motilaloswal.com/api/getapisdata';
@@ -121,6 +96,8 @@ function populateMarketGainers(gainersData) {
     // Append the row to the table body
     tableBody.insertAdjacentHTML('beforeend', row);
   });
+  initGainerImageCharts();
+  initLooserImageCharts();
 };
 function initGainerImageCharts() {
   // Select all the images with the class 'gainerImage'
@@ -294,7 +271,7 @@ function initLooserImageCharts() {
   });
 } 
 setTimeout(() => {
-  initGainerImageCharts();
-  initLooserImageCharts();
-}, 300);
-getMarketGainers('1H');
+  getMarketGainers('1H');
+}, 2000);
+
+

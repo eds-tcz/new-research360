@@ -291,27 +291,31 @@ const progressBarHTML = generateProgressBarHTML(86, 13, 80, 20);
 // Append this HTML to a specific cell in your table
 function appendProgressBars() {
   const adRows = document.querySelectorAll('.ad-tab .ad-row:not(:first-child)');
-  
-  adRows.forEach((row, index) => {
-      const leftValue = Math.floor(Math.random() * 100); // Replace with your logic
-      const centerValue = Math.floor(Math.random() * 100); // Replace with your logic
-      const progressLeft = Math.floor(Math.random() * 100); // Replace with your logic
-      const progressRight = 100 - progressLeft; // Completes the bar to 100%
+  let index = 0;
 
-      // Generate the HTML for each row
-      const progressBarHTML = generateProgressBarHTML(leftValue, centerValue, progressLeft, progressRight);
-      
-      const thirdCell = row.querySelectorAll('.ad-cell')[2];
-      if (thirdCell) {
-          thirdCell.innerHTML = progressBarHTML;
-      }
-  });
+  function processNextRow() {
+    if (index >= adRows.length) return;
+    const row = adRows[index];
+    const leftValue = Math.floor(Math.random() * 100);
+    const centerValue = Math.floor(Math.random() * 100);
+    const progressLeft = Math.floor(Math.random() * 100);
+    const progressRight = 100 - progressLeft;
+    const progressBarHTML = generateProgressBarHTML(leftValue, centerValue, progressLeft, progressRight);
+
+    const thirdCell = row.querySelectorAll('.ad-cell')[2];
+    if (thirdCell) thirdCell.innerHTML = progressBarHTML;
+
+    index++;
+    requestIdleCallback(processNextRow); // Or use setTimeout(processNextRow, 0) for faster processing
+  }
+  processNextRow();
 }
+
 setTimeout(() => {
   initDiiCashChart();
   initFiiCashChart();
   bullishChart();
   appendProgressBars();
-}, 300);
+}, 2000);
 
 
