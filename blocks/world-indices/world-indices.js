@@ -18,7 +18,7 @@ function formatTimeTo12Hour(time) {
   const [hours, minutes] = time.split(':').map(Number);
   const ampm = hours >= 12 ? 'PM' : 'AM';
   const formattedHour = hours % 12 || 12; // Convert 0 to 12 for midnight/noon
-  return `${formattedHour}:${minutes.toString().padStart(2, '0')} ${ampm}`;
+  return `${formattedHour}:${minutes?.toString()?.padStart(2, '0')} ${ampm}`;
 }
 async function getWorldIndices() {
   const url = 'https://research360api.motilaloswal.com/api/getapisdata';
