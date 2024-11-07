@@ -41,6 +41,7 @@
   border-radius: 8px;
   margin-right: 1%;
   padding: 12px;
+  cursor: pointer;
 }
 .basket-card-image {
   position: relative;

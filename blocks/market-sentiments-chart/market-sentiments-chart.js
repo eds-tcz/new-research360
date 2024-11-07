@@ -38,20 +38,24 @@ function populateIndianIndices(marketData) {
     const formattedPerChange = Math.abs(parseFloat(data.per_change).toFixed(2));
     // Create the HTML structure using template literals
     const marketDiv = `
-      <div class='market-sentiments-div'>
-        <div class='market-sentiments-1'>
-          <p class='market-sentiment-text-1'>${data.index_nm}</p>
-          <div style='display:flex; align-items:center; justify-content: space-between;'>
-           <p class='market-sentiment-text-2'>${data.ltp}</p>
-           <p class='market-sentiment-text-4'></p>
-          </div>
-          <p class='market-sentiment-text-3' style='color: ${
-            data.per_change > 0 ? 'green' : 'red'
-          };'>
-            ${perChangeSign}${formattedDataChange} (${perChangeSign}${formattedPerChange}%)
-          </p>
-        </div>
+   <a href="https://www.research360.in/indian-indices/india-vix/overview" target="_blank" style="text-decoration: none;">
+  <div class='market-sentiments-div'>
+    <div class='market-sentiments-1'>
+      <p class='market-sentiment-text-1'>${data.index_nm}</p>
+      <div style='display:flex; align-items:center; justify-content: space-between;'>
+        <p class='market-sentiment-text-2'>${data.ltp}</p>
+        <p class='market-sentiment-text-4'></p>
       </div>
+      <p class='market-sentiment-text-3' style='color: ${
+        data.per_change > 0 ? 'green' : 'red'
+      };'>
+        ${perChangeSign}${formattedDataChange} (${perChangeSign}${formattedPerChange}%)
+      </p>
+    </div>
+  </div>
+</a>
+
+
     `;
     // Append the populated HTML to the container
     container.insertAdjacentHTML('beforeend', marketDiv);
