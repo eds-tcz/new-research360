@@ -1,6 +1,7 @@
 export default function decorate(block) {
   [...block.children].forEach((row) => {
     row.classList.add('nifty-cards');
+    row.classList.add('grey-card');
     [...row.children].forEach((div, index) => {
       div.classList.add(`nifty-cards-${index + 1}`);
       const paragraphs = div.querySelectorAll('p');
