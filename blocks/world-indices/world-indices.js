@@ -20,7 +20,7 @@ function formatTimeTo12Hour(time) {
   const formattedHour = hours % 12 || 12; // Convert 0 to 12 for midnight/noon
   return `${formattedHour}:${minutes.toString().padStart(2, '0')} ${ampm}`;
 }
-function getWorldIndices() {
+async function getWorldIndices() {
   const url = 'https://research360api.motilaloswal.com/api/getapisdata';
   const apiName = 'GET_WORLDINDICES';
   fetch(`${url}?api_name=${apiName}&index_code=0`)
@@ -82,7 +82,6 @@ function populateWorldIndices(marketData) {
     // Append the populated HTML to the container
     container.insertAdjacentHTML('beforeend', marketDiv);
   });
-    setTimeout(() => {
       try {
         // eslint-disable-next-line no-undef
         $('.world-indices').owlCarousel({
@@ -103,7 +102,6 @@ function populateWorldIndices(marketData) {
       } catch (error) {
         console.log(error.message);
       }
-    }, 2500);
 }
 setTimeout(() => {
     getWorldIndices();
