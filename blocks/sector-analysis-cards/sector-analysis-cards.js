@@ -28,7 +28,7 @@ function loadExternalResources(resources) {
 
 export default function decorate() {
   // eslint-disable-next-line no-use-before-define
-  stockanalysisdata();
+  
   // [...block.children].forEach((row, r) => {
   // });
 }
@@ -360,3 +360,6 @@ async function stockanalysisdata() {
     console.error('Error fetching stock analysis data:', error);
   }
 }
+setTimeout(() => {
+  stockanalysisdata();
+}, 3000);

@@ -157,4 +157,4 @@ function initCharts() {
 }
 setTimeout(() => {
   getIndianIndices();
-}, 1500);
+}, 4000);
