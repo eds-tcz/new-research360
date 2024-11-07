@@ -107,5 +107,5 @@ function populateWorldIndices(marketData) {
 }
 setTimeout(() => {
     getWorldIndices();
-}, 2000); // Delay the API call by 3 seconds
+}, 4000); // Delay the API call by 3 seconds
 

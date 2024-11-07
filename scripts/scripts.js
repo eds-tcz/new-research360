@@ -128,8 +128,8 @@ async function loadLazy(doc) {
 function loadDelayed() {
   // eslint-disable-next-line import/no-cycle
   window.setTimeout(() => import('./delayed.js'), 3000);
-  window.setTimeout(() => import('./libs/lightweightChart.js'), 300);
-  window.setTimeout(() => import('./libs/apexChart.js'), 300);
+  window.setTimeout(() => import('./libs/lightweightChart.js'), 3000);
+  window.setTimeout(() => import('./libs/apexChart.js'), 3000);
   // window.setTimeout(() => import('./libs/jquery.js'), 3000);
   // load anything that can be postponed to the latest here
 }

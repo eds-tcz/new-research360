@@ -316,6 +316,6 @@ setTimeout(() => {
   initFiiCashChart();
   bullishChart();
   appendProgressBars();
-}, 2000);
+}, 5000);
 
 

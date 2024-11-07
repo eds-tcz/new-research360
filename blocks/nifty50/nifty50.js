@@ -252,5 +252,5 @@ function getNifty50Data(indexCode) {
 }
 setTimeout(() => {
   getNifty50Data('20559');
-}, 3000);
+}, 4000);
 
