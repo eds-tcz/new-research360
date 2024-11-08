@@ -243,7 +243,7 @@ function getNifty50Data(indexCode) {
       ).innerText = `${indexData.ltp}`;
       const additionalInfo = document.createElement('p');
       nifty50Card.appendChild(additionalInfo);
-      niftyChart();
+     // niftyChart();
       document.querySelectorAll('.nifty-cards.grey-card').forEach(card => card.classList.remove('grey-card'));
     });
   // .catch((error) => {
