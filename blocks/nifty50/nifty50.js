@@ -250,7 +250,8 @@ function getNifty50Data(indexCode) {
   //   console.error('API Call Failed:', error);
   // });
 }
-setTimeout(() => {
-  getNifty50Data('20559');
-}, 4000);
+// setTimeout(() => {
+//  // getNifty50Data('20559');
+//   //niftyChart();
+// }, 4000);
 
