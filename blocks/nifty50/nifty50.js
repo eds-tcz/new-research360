@@ -1,7 +1,6 @@
 export default function decorate(block) {
   [...block.children].forEach((row) => {
     row.classList.add('nifty-cards');
-    row.classList.add('grey-card');
     [...row.children].forEach((div, index) => {
       div.classList.add(`nifty-cards-${index + 1}`);
       const paragraphs = div.querySelectorAll('p');
@@ -244,7 +243,7 @@ function getNifty50Data(indexCode) {
       const additionalInfo = document.createElement('p');
       nifty50Card.appendChild(additionalInfo);
       niftyChart();
-      document.querySelectorAll('.nifty-cards.grey-card').forEach(card => card.classList.remove('grey-card'));
+     // document.querySelectorAll('.nifty-cards.grey-card').forEach(card => card.classList.remove('grey-card'));
     });
   // .catch((error) => {
   //   console.error('API Call Failed:', error);
