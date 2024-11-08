@@ -65,14 +65,14 @@
 }
 .market-sentiments-div.grey-card {
   background: linear-gradient(90deg, #e0e0e0, #f0f0f0, #e0e0e0);
-  /* height: 120px !important;
-  width: 203px !important; */
+  height: 120px !important;
+  width: 190px !important;
 }
-/* @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .market-sentiments-div.grey-card {
     width: 28% !important;
   }
-} */
+}
 .grey-card > * {
   opacity: 0;
 }
