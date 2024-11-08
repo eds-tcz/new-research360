@@ -272,6 +272,6 @@ function initLooserImageCharts() {
 } 
 setTimeout(() => {
   getMarketGainers('1H');
-}, 4000);
+}, 4500);
 
 
