@@ -91,7 +91,11 @@
   width: 190px !important;
   height: 110px !important;
 }
-
+@media only screen and (max-width: 768px) {
+  .world-indices-div.grey-card {
+    width: 28% !important;
+  }
+}
 .grey-card > * {
   opacity: 0;
 }
