@@ -66,7 +66,7 @@
 .market-sentiments-div.grey-card {
   background: linear-gradient(90deg, #e0e0e0, #f0f0f0, #e0e0e0);
   width: 190px !important;
-  height: 110px !important;
+  height: 126px !important;
 }
 @media only screen and (max-width: 768px) {
   .market-sentiments-div.grey-card {
