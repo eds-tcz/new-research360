@@ -252,3 +252,12 @@ main .section.highlight {
     width: fit-content;
   }
 } */
+
+@media (max-width: 768px) {
+  html {
+    width: fit-content;
+  }
+  body {
+    max-width: 100%;
+  }
+}
