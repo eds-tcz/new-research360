@@ -254,9 +254,9 @@ main .section.highlight {
 } */
 
 @media (max-width: 768px) {
-  /* html {
+  html {
     width: fit-content;
-  } */
+  }
   body {
     max-width: 100%;
   }
