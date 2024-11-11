@@ -10,6 +10,11 @@
   display: flex;
   gap: 20px;
 }
+@media only screen and (max-width: 768px) {
+  .mlow-market-sentiments {
+    display: block;
+  }
+}
 
 .mlow-ms-section {
   background-color: #fff;
