@@ -41,7 +41,11 @@
 .market-sentiments-chart-container {
   padding-top: 5px;
 }
-
+@media (max-width: 768px) {
+  .market-sentiments-chart-container {
+    display: none;
+  }
+}
 .market-sentiment-text-2 {
   font-weight: 500;
   font-size: 16px;
