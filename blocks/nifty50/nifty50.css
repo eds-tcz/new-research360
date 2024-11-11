@@ -10,7 +10,7 @@
 
 .nifty-cards {
   width: 30%;
-  max-width: 409.8x !important;
+  max-width: 409.8px !important;
   border: 1px solid #ddd !important;
   border-radius: 0.5rem;
   overflow: hidden;
