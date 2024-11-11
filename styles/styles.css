@@ -247,8 +247,8 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
   html {
     width: fit-content;
   }
-}
+} */
