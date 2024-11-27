@@ -15,7 +15,7 @@
     display: block;
   }
   .mlow-ms-section {
-    width: 50%;
+    display: none !important;
   }
 }
 
