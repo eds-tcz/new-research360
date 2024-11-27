@@ -23,6 +23,9 @@
   .nifty50 {
     display: block;
   }
+  .nifty50-container {
+    display: none;
+  }
 }
 
 .grey-card {
