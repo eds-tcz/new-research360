@@ -1,0 +1,95 @@
+.web-socket-div {
+  width: 20%;
+  margin-right: 10px;
+}
+.web-socket {
+  display: flex;
+}
+.web-socket-wrapper {
+  padding: 0;
+}
+.crypto-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.crypto-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 239px;
+  transition: transform 0.3s ease;
+  margin: 6px;
+}
+
+.crypto-card:hover {
+  transform: scale(1.05);
+}
+
+.crypto-header {
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.crypto-symbol {
+  text-transform: uppercase;
+  padding: 8px 0;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 !important;
+  color: #000;
+  line-height: 24px;
+}
+
+.crypto-price {
+  font-size: 1.2em;
+  color: #fcaf17;
+  font-weight: bold;
+}
+
+.crypto-details {
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.crypto-change,
+.crypto-trend {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  font-size: 14px;
+  color: #000 !important;
+}
+
+.change-value {
+  font-weight: bold;
+  color: #666;
+  margin-left: 10px;
+}
+
+.trend-indicator {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-left: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .crypto-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .crypto-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
